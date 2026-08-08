@@ -91,7 +91,7 @@ const restaurants = [
 const hotels = [
   { name: "Limketkai Luxe Hotel", grade: "4성급", rooms: "218실", detail: "도심의 스카이라인을 완성하는 골드빛 랜드마크 호텔", image: "/hotel-limketkai.jpg" },
   { name: "Seda Centrio Hotel", grade: "4성급", rooms: "147실", detail: "센트리오 몰과 연결된 편리한 도심형 호텔", image: "/hotel-seda-centrio.jpg" },
-  { name: "Dream Golftel", grade: "3성급", rooms: "42실", detail: "델몬테 골프장에서 약 5분 거리의 골프 특화 숙소", image: "/hotel-dream-golftel.jpg" },
+  { name: "Dream Golftel", grade: "3성급", rooms: "42실", detail: "델몬테 골프장에서 약 5분 거리의 골프 특화 숙소", image: "/hotel-dream-golftel-new.png" },
   { name: "Lohas Airport Hotel", grade: "3성급", rooms: "16실", detail: "라긴딩안 공항에서 약 5분 거리의 편리한 공항 호텔", image: "/hotel-lohas-airport-new.png" },
 ];
 
