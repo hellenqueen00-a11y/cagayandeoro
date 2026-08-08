@@ -84,7 +84,7 @@ const restaurants = [
   { ko: "써카 1850", en: "Circa 1850", place: "/dining-circa-place-new.png", food: "/dining-circa-food.jpg" },
   { ko: "파나가탄", en: "Panagatan", place: "/dining-panagatan-place-new.png", food: "/dining-panagatan-food.jpg" },
   { ko: "센트로 1850", en: "Sentro 1850", place: "/dining-sentro-place.jpg", food: "/dining-sentro-food.jpg" },
-  { ko: "실버레인", en: "Silver Rain", type: "KOREAN RESTAURANT", place: "/dining-silver-rain-food.jpg", food: "/dining-silver-rain-food.jpg" },
+  { ko: "실버레인", en: "Silver Rain", type: "KOREAN RESTAURANT", place: "/dining-silver-rain-menu-1.png", food: "/dining-silver-rain-menu-2.png" },
   { ko: "서울블랙", en: "Seoul Black", type: "KOREAN RESTAURANT", place: "/dining-seoul-black-place.jpg", food: "/dining-seoul-black-food.jpg" },
 ];
 
