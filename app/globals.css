@@ -51,8 +51,6 @@ h2 { margin: 0; font-size: clamp(46px, 6vw, 88px); line-height: .98; letter-spac
 .highlight > span { font: italic 16px Georgia, serif; color: var(--green); }
 .highlight-media { position: relative; height: 250px; margin: 26px 0 30px; overflow: hidden; background: var(--ink); }
 .highlight-media img { object-fit: cover; }
-.highlight-media.dual { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; background: var(--cream); }
-.highlight-media.dual img { position: relative !important; width: 100% !important; height: 100% !important; inset: auto !important; object-fit: contain; background: var(--ink); }
 .highlight h3 { font-size: 21px; margin: 0 0 14px; }
 .highlight p { font-size: 14px; line-height: 1.75; max-width: 280px; opacity: .75; }
 .destinations { background: var(--ink); color: var(--cream); padding: 120px 8vw; }

@@ -159,9 +159,8 @@ export default function Home() {
         {highlights.map((item) => (
           <article className="highlight" key={item.number}>
             <span>{item.number}</span>
-            <div className={`highlight-media ${item.secondaryImage ? "dual" : ""}`}>
+            <div className="highlight-media">
               <Image src={item.image} alt={item.alt} fill sizes="(max-width: 800px) 100vw, 33vw" />
-              {item.secondaryImage && <Image src={item.secondaryImage} alt={item.secondaryAlt ?? ""} fill sizes="(max-width: 800px) 50vw, 16vw" />}
             </div>
             <h3>{item.title}</h3>
             <p>{item.copy}</p>
