@@ -9,11 +9,10 @@ const highlights = [
 const destinationGroups = [
   {
     number: "02",
-    eyebrow: "WATERFALL & THRILL",
-    title: "폭포와 액티비티",
-    intro: "숨겨진 폭포의 장관부터 강과 고원을 가르는 짜릿한 도전까지, 카가얀데오로를 대표하는 모험의 여정입니다.",
+    eyebrow: "RIVER & THRILL",
+    title: "강과 액티비티",
+    intro: "거친 강의 물살부터 시원한 고원을 가르는 짜릿한 도전까지, 카가얀데오로를 대표하는 모험의 여정입니다.",
     destinations: [
-      { title: "티나고 폭포", image: "/tinago-falls.jpg", alt: "깊은 협곡 속 티나고 폭포", copy: "약 73m 높이의 웅장한 폭포와 에메랄드빛 천연 수영장. 400여 개의 계단 끝에서 만나는 신비로운 자연 명소입니다.", tags: ["폭포", "수영", "데이투어"] },
       { title: "화이트 워터 래프팅", image: "/whitewater-rafting-pdf.jpg", alt: "카가얀강의 화이트 워터 래프팅", copy: "필리핀 래프팅의 성지로 불리는 카가얀강에서 열대 자연과 급류를 동시에 경험하는 대표 액티비티입니다.", tags: ["래프팅", "팀 액티비티", "반일"] },
       { title: "다힐라얀 어드벤처 파크", image: "/dahilayan-park.jpg", alt: "다힐라얀 어드벤처 파크 집라인", copy: "해발 1,430m의 시원한 고원에서 집라인과 산악 액티비티를 즐기는 필리핀 대표 어드벤처 명소입니다.", tags: ["집라인", "고원", "가족 여행"] },
     ],
