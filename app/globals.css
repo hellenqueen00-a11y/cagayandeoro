@@ -37,7 +37,12 @@ h1 em, h2 em, .quote em { font-family: Georgia, serif; font-weight: 400; }
 .manifesto { padding: 130px 8vw 100px; display: grid; grid-template-columns: 1fr 2.4fr; gap: 7vw; }
 .section-kicker { font-size: 10px; font-weight: 900; letter-spacing: .18em; padding-top: 16px; }
 h2 { margin: 0; font-size: clamp(46px, 6vw, 88px); line-height: .98; letter-spacing: -.06em; }
-.lead { max-width: 650px; margin: 42px 0 0 auto; font-size: 18px; line-height: 1.85; word-break: keep-all; }
+.intro-text { max-width: 700px; margin: 42px 0 0 auto; display: grid; gap: 18px; font-size: 17px; line-height: 1.85; word-break: keep-all; }
+.intro-text p { margin: 0; }
+.route-map-figure { grid-column: 1 / -1; margin: 42px 0 0; background: white; border: 1px solid var(--line); padding: 16px; box-shadow: 14px 16px 0 rgba(18,55,42,.1); }
+.route-map-figure img { display: block; width: 100%; height: auto; }
+.route-map-figure figcaption { display: flex; justify-content: space-between; gap: 24px; padding: 16px 6px 2px; font-size: 11px; line-height: 1.6; }
+.route-map-figure figcaption span { font-size: 9px; font-weight: 900; letter-spacing: .18em; white-space: nowrap; color: var(--green); }
 .highlights { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .highlight { min-height: 410px; padding: 40px 4vw; border-right: 1px solid var(--line); }
 .highlight:last-child { border-right: 0; }
@@ -80,7 +85,9 @@ footer h2 { font-size: clamp(46px, 5.5vw, 78px); margin-top: 25px; }
   .route-card { right: 26px; bottom: 28px; width: 160px; padding: 16px; } .route-card strong { font-size: 17px; }
   .vertical-note { display: none; }
   .manifesto { padding: 90px 24px 70px; grid-template-columns: 1fr; gap: 28px; }
-  .lead { margin-top: 28px; font-size: 16px; }
+  .intro-text { margin-top: 28px; font-size: 15px; }
+  .route-map-figure { margin-top: 10px; padding: 8px; box-shadow: 8px 9px 0 rgba(18,55,42,.1); }
+  .route-map-figure figcaption { flex-direction: column; gap: 5px; padding: 12px 4px 4px; }
   .highlights { grid-template-columns: 1fr; }
   .highlight { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); padding: 42px 24px; }
   .icon-shape { margin: 34px 0; }
