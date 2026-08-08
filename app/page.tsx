@@ -98,8 +98,10 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="sun" aria-label="Cagayan De Oro">
-          <span>Cagayan</span>
-          <strong>De Oro</strong>
+          <div className="sun-logo">
+            <span>Cagayan</span>
+            <span>De Oro</span>
+          </div>
         </div>
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
