@@ -70,6 +70,15 @@ const destinationGroups: Array<{
   },
 ];
 
+const itinerary = [
+  { day: "DAY 1", title: "도착과 첫 만남", theme: "ARRIVAL & DISCOVERY", items: ["공항 도착 (08:30)", "일리간 시장과의 만남", "티나고 폭포 투어", "웰컴 디너"] },
+  { day: "DAY 2", title: "바다와 선셋", theme: "OCEAN & SUNSET", items: ["헬멧다이빙 · 스쿠버다이빙 · 호핑투어", "해양스포츠", "점심: 씨푸드 부들파이트", "디바인 메르시 성지", "선셋 디너 · 도시 야경 뷰 맛집"] },
+  { day: "DAY 3", title: "강을 가르는 모험", theme: "RIVER & THRILL", items: ["실제 총쏘기 체험", "화이트 워터 래프팅", "저녁: 한국식당"] },
+  { day: "DAY 4", title: "골프와 고원", theme: "GOLF & HIGHLAND", items: ["델몬테 골프 · 100년 골프장", "다힐라얀 어드벤처 파크 · 840m 집라인", "커뮤니얼 랜치 말타기", "세계 최대 규모 파인애플 농장 체험", "송별 만찬 · 주지사와의 만남"] },
+  { day: "DAY 5", title: "라운딩과 귀국길", theme: "GOLF & DEPARTURE", items: ["푸에블로 골프", "클라베리아 마운틴 뷰", "쇼핑 후 공항 이동", "18:50 귀국행"] },
+  { day: "DAY 6", title: "여정의 마무리", theme: "HOMECOMING", items: ["07:20 인천공항 도착"] },
+];
+
 export default function Home() {
   return (
     <main>
@@ -80,7 +89,8 @@ export default function Home() {
         </a>
         <div className="nav-links">
           <a href="#experience">경험</a>
-          <a href="#schedule">일정</a>
+          <a href="#schedule">관광지</a>
+          <a href="#itinerary">일정</a>
           <a href="#contact">문의</a>
         </div>
         <a className="nav-cta" href="#contact">초청 문의 <span>↗</span></a>
@@ -213,6 +223,32 @@ export default function Home() {
             </div>
           </section>
         ))}
+      </section>
+
+      <section className="itinerary-section" id="itinerary">
+        <header className="itinerary-header">
+          <p className="section-kicker">03 / ITINERARY</p>
+          <h2>4박 6일,<br /><em>도시를 깊이 만나는 여정</em></h2>
+          <p>바다와 강, 골프와 고원을 균형 있게 연결한 카가얀데오로 대표 팸투어 일정입니다.</p>
+        </header>
+        <div className="itinerary-summary" aria-label="여행 일정 요약">
+          <div><strong>4</strong><span>NIGHTS</span></div>
+          <div><strong>6</strong><span>DAYS</span></div>
+          <div><strong>2</strong><span>GOLF ROUNDS</span></div>
+          <div><strong>1</strong><span>NEW DESTINATION</span></div>
+        </div>
+        <div className="itinerary-grid">
+          {itinerary.map((item, index) => (
+            <article className="itinerary-card" key={item.day}>
+              <div className="itinerary-card-top">
+                <span>0{index + 1}</span>
+                <div><small>{item.theme}</small><h3>{item.title}</h3></div>
+              </div>
+              <ul>{item.items.map((detail) => <li key={detail}>{detail}</li>)}</ul>
+              <div className="itinerary-day">{item.day}</div>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="quote">
