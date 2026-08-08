@@ -78,7 +78,7 @@ const itinerary = [
 ];
 
 const restaurants = [
-  { ko: "하이 릿지", en: "High Ridge", place: "/dining-high-ridge-place.jpg", food: "/dining-high-ridge-food.jpg" },
+  { ko: "하이 릿지", en: "High Ridge", place: "/dining-high-ridge-place-new.png", food: "/dining-high-ridge-food.jpg" },
   { ko: "리카도스", en: "Ricardo's", place: "/dining-ricardos-place.jpg", food: "/dining-ricardos-food.jpg" },
   { ko: "팻 셰프", en: "Fat Chef", place: "/dining-fat-chef-place.jpg", food: "/dining-fat-chef-food.jpg" },
   { ko: "써카 1850", en: "Circa 1850", place: "/dining-circa-place.jpg", food: "/dining-circa-food.jpg" },
