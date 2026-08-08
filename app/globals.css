@@ -9,12 +9,14 @@ a { color: inherit; text-decoration: none; }
 .logo { display: flex; align-items: center; gap: 10px; font-weight: 900; line-height: .82; letter-spacing: -.04em; }
 .logo-mark { width: 38px; height: 38px; display: grid; place-items: center; border: 2px solid currentColor; border-radius: 50% 50% 46% 54%; font-size: 22px; font-style: italic; }
 .logo small { font-size: 8px; letter-spacing: .13em; }
-.nav-links { display: flex; gap: 42px; font-size: 13px; font-weight: 700; }
+.nav-links { display: flex; gap: 34px; font-size: 13px; font-weight: 700; }
 .nav-links a:hover { color: var(--yellow); }
 .nav-cta { border-bottom: 1px solid; padding: 10px 0; font-size: 13px; font-weight: 800; }
 .nav-cta span { margin-left: 18px; }
 .hero { min-height: 760px; height: 100vh; overflow: hidden; position: relative; display: flex; align-items: center; padding: 110px 10vw 40px; background: var(--green); color: #fffdf2; }
-.sun { width: min(48vw, 690px); aspect-ratio: 1; border-radius: 50%; background: var(--yellow); position: absolute; right: 6vw; top: 12vh; box-shadow: 0 0 100px rgba(255,214,90,.35); }
+.sun { width: min(48vw, 690px); aspect-ratio: 1; border-radius: 50%; background: var(--yellow); position: absolute; right: 6vw; top: 12vh; box-shadow: 0 0 100px rgba(255,214,90,.35); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--ink); line-height: .82; transform: rotate(-7deg); }
+.sun span { margin-left: -4vw; font: 700 clamp(15px, 2.2vw, 32px) Georgia, serif; font-style: italic; letter-spacing: .08em; }
+.sun strong { font: 700 clamp(44px, 6.5vw, 96px) Georgia, serif; font-style: italic; letter-spacing: -.07em; }
 .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 12.5vw 100%, 100% 25%; mask-image: linear-gradient(to right, transparent, #000 55%); }
 .hero-copy { position: relative; z-index: 2; max-width: 810px; }
 .eyebrow { display: flex; align-items: center; gap: 11px; font-size: 11px; font-weight: 800; letter-spacing: .18em; }
@@ -126,6 +128,7 @@ footer h2 { font-size: clamp(46px, 5.5vw, 78px); margin-top: 25px; }
   .nav { padding: 0 22px; } .nav-links { display: none; } .nav-cta { font-size: 11px; }
   .hero { min-height: 720px; padding: 110px 24px 40px; align-items: flex-start; padding-top: 180px; }
   .sun { width: 88vw; right: -34vw; top: 110px; }
+  .sun span { margin-left: -12vw; }
   h1 { font-size: clamp(58px, 18vw, 86px); } .hero-description { font-size: 14px; }
   .hero-actions { flex-direction: column; align-items: flex-start; gap: 14px; }
   .route-card { right: 26px; bottom: 28px; width: 160px; padding: 16px; } .route-card strong { font-size: 17px; }

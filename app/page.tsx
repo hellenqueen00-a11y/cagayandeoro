@@ -88,8 +88,8 @@ export default function Home() {
           <span>CDO<br /><small>FAM TOUR 2026</small></span>
         </a>
         <div className="nav-links">
-          <a href="#experience">경험</a>
-          <a href="#schedule">관광지</a>
+          <a href="#experience">도시소개</a>
+          <a href="#schedule">여행스팟</a>
           <a href="#itinerary">일정</a>
           <a href="#contact">문의</a>
         </div>
@@ -97,7 +97,10 @@ export default function Home() {
       </nav>
 
       <section className="hero" id="top">
-        <div className="sun" aria-hidden="true" />
+        <div className="sun" aria-label="Cagayan De Oro">
+          <span>Cagayan</span>
+          <strong>De Oro</strong>
+        </div>
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
           <p className="eyebrow"><span /> NORTHERN MINDANAO · PHILIPPINES</p>
@@ -263,8 +266,9 @@ export default function Home() {
         </div>
         <div className="contact-card">
           <p>PRESS · CREATOR · BRAND PARTNERSHIP</p>
-          <a href="mailto:hello@cdofamtour.com">hello@cdofamtour.com <span>↗</span></a>
-          <small>초청 및 파트너십 문의는 메일로 연락해 주세요.</small>
+          <a href="mailto:hellenqueen00@gmail.com">hellenqueen00@gmail.com <span>↗</span></a>
+          <a href="tel:+639176245267">+63 917 624 5267 <span>↗</span></a>
+          <small>초청 및 파트너십 문의는 이메일 또는 전화로 연락해 주세요.</small>
         </div>
         <div className="footer-bottom"><span>© 2026 CDO FAM TOUR</span><span>CAGAYAN DE ORO · PHILIPPINES</span></div>
       </footer>
