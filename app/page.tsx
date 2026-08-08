@@ -6,13 +6,6 @@ const highlights = [
   { number: "03", title: "모험의 하루", copy: "시원한 워터래프팅부터 짜릿한 집라인까지 가슴 뛰는 새로운 경험을 만나는 하루", image: "/water-rafting.jpg", secondaryImage: "/zipline.webp", alt: "카가얀데오로 강의 워터래프팅", secondaryAlt: "다힐라얀의 짜릿한 집라인" },
 ];
 
-const itinerary = [
-  { day: "DAY 1", title: "도시의 첫인상", copy: "도착 · 로컬 다이닝 · 웰컴 네트워킹" },
-  { day: "DAY 2", title: "강을 가르는 에너지", copy: "카가얀 리버 래프팅 · 리버사이드 런치" },
-  { day: "DAY 3", title: "고원 위의 골든아워", copy: "다힐라얀 어드벤처 · 선셋 디너" },
-  { day: "DAY 4", title: "기억을 콘텐츠로", copy: "시티 스토리워크 · 브런치 · 출국" },
-];
-
 export default function Home() {
   return (
     <main>
@@ -86,22 +79,46 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="schedule" id="schedule">
-        <div className="schedule-intro">
-          <p className="section-kicker">02 / THE JOURNEY</p>
-          <h2>4 DAYS.<br /><em>ONE STORY.</em></h2>
-          <p>도시의 첫인상부터 마지막 브런치까지, 매일 새로운 감각을 깨우는 여정입니다.</p>
+      <section className="destinations" id="schedule">
+        <header className="destinations-header">
+          <p className="section-kicker">02 / DESTINATION PORTFOLIO</p>
+          <h2>한 도시,<br /><em>여행의 모든 가능성</em></h2>
+          <p>산과 강, 바다와 고원이 가까이 연결된 카가얀데오로. 다양한 여행상품으로 확장할 수 있는 새로운 목적지를 소개합니다.</p>
+        </header>
+
+        <div className="category-heading">
+          <span>01</span>
+          <div><p>SEA &amp; ADVENTURE</p><h3>바다와 모험</h3></div>
+          <p>청정 바다의 생명력부터 맹그로브 숲의 고요한 선셋까지, 하루 안에 만나는 서로 다른 바다의 표정.</p>
         </div>
-        <div className="timeline">
-          {itinerary.map((item, index) => (
-            <article key={item.day}>
-              <span>{item.day}</span>
-              <div className="day-number">0{index + 1}</div>
-              <div><h3>{item.title}</h3><p>{item.copy}</p></div>
-              <i aria-hidden="true">↗</i>
-            </article>
-          ))}
-        </div>
+
+        <article className="destination-feature">
+          <div className="destination-copy">
+            <span>01 — OCEAN ACTIVITY</span>
+            <h3>로하스 아쿠아<br />해양스포츠</h3>
+            <p>헬멧다이빙과 스쿠버다이빙으로 산호초와 열대어, 바다거북이 살아가는 신비로운 수중 세계를 가까이에서 만납니다.</p>
+            <div className="product-tags"><span>스쿠버다이빙</span><span>헬멧다이빙</span><span>해양 체험</span></div>
+          </div>
+          <div className="photo-mosaic ocean-mosaic">
+            <div className="photo-main"><Image src="/helmet-diving.jpg" alt="로하스 아쿠아의 헬멧다이빙 체험" fill sizes="(max-width: 800px) 100vw, 42vw" /></div>
+            <div><Image src="/sea-turtle.jpg" alt="청정 바다에서 만나는 바다거북" fill sizes="(max-width: 800px) 50vw, 21vw" /></div>
+            <div><Image src="/scuba-diving.jpg" alt="열대어와 함께하는 스쿠버다이빙" fill sizes="(max-width: 800px) 50vw, 21vw" /></div>
+          </div>
+        </article>
+
+        <article className="destination-feature reverse">
+          <div className="destination-copy">
+            <span>02 — NATURE &amp; SUNSET</span>
+            <h3>맹그로브 숲과<br />선셋</h3>
+            <p>바다 위 대나무 보드워크를 따라 맹그로브 숲을 거닐고, 수평선을 물들이는 잔잔한 노을과 함께 하루를 마무리합니다.</p>
+            <div className="product-tags"><span>맹그로브 산책</span><span>선셋 감상</span><span>포토 스폿</span></div>
+          </div>
+          <div className="photo-mosaic sunset-mosaic">
+            <div className="photo-main"><Image src="/rohas-sea.jpeg" alt="로하스 아쿠아의 바다 위 보드워크" fill sizes="(max-width: 800px) 100vw, 42vw" /></div>
+            <div><Image src="/mangrove-forest.jpg" alt="맹그로브 숲 사이의 대나무 길" fill sizes="(max-width: 800px) 50vw, 21vw" /></div>
+            <div><Image src="/rohas-sunset.jpg" alt="잔잔한 바다 위로 지는 선셋" fill sizes="(max-width: 800px) 50vw, 21vw" /></div>
+          </div>
+        </article>
       </section>
 
       <section className="quote">
