@@ -33,7 +33,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow"><span /> NORTHERN MINDANAO · PHILIPPINES</p>
           <h1>낯선 도시의<br />가장 <em>빛나는</em> 순간.</h1>
-          <p className="hero-description">모험과 미식, 사람과 이야기가 만나는<br />카가얀데오로 브랜드 팸투어.</p>
+          <p className="hero-description">산, 강, 바다 모든 곳이 어우러진<br />힐링과 모험의 숨은 여행지</p>
           <div className="hero-actions">
             <a className="button primary" href="#schedule">여정 살펴보기 <span>→</span></a>
             <a className="text-link" href="#experience">WHY CDO? <span>↓</span></a>
@@ -52,7 +52,7 @@ export default function Home() {
       <section className="manifesto" id="experience">
         <div className="section-kicker">01 / THE EXPERIENCE</div>
         <div>
-          <h2>여행을 넘어,<br /><em>브랜드의 장면</em>을 만듭니다.</h2>
+          <h2>카가얀데오르를<br /><em>소개합니다</em></h2>
           <p className="lead">CDO는 필리핀의 새로운 얼굴입니다. 거친 강의 에너지, 고원의 바람, 그리고 따뜻한 환대. 우리는 이 모든 순간을 오래 남을 이야기로 연결합니다.</p>
         </div>
       </section>
