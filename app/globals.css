@@ -4,6 +4,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--cream); color: var(--ink); font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif; }
+.share-preview-fallback { position: absolute; width: 1px; height: 1px; left: 0; top: 0; overflow: hidden; opacity: .001; pointer-events: none; z-index: -1; }
 a { color: inherit; text-decoration: none; }
 .nav { height: 86px; padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(246,240,228,.25); position: absolute; inset: 0 0 auto; color: white; z-index: 10; }
 .logo { display: flex; align-items: center; gap: 10px; font-weight: 900; line-height: .82; letter-spacing: -.04em; }

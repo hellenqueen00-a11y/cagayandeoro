@@ -98,6 +98,9 @@ const hotels = [
 export default function Home() {
   return (
     <main>
+      <div className="share-preview-fallback" aria-hidden="true">
+        <Image src="/share-cover-v3.png" alt="" width={1920} height={1008} priority unoptimized />
+      </div>
       <nav className="nav" aria-label="주요 메뉴">
         <a className="logo" href="#top" aria-label="CDO 팸투어 홈">
           <span className="logo-mark">C</span>
