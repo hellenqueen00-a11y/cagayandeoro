@@ -148,8 +148,8 @@ export default function Home() {
           <figcaption><span>ROUTE GUIDE</span> 마닐라 또는 세부를 경유하는 두 가지 여정</figcaption>
         </figure>
         <div className="intro-content">
-          <div className="city-wordmark">
-            <Image src="/cagayan-de-oro-wordmark.png" alt="컬러 Cagayan de Oro 워드마크" width={595} height={220} sizes="(max-width: 800px) 100vw, 420px" />
+          <div className="city-wordmark" aria-label="Cagayan De Oro">
+            {"CAGAYANDEORO".split("").map((letter, index) => <span key={`${letter}-${index}`}>{letter}</span>)}
           </div>
           <h2>카가얀데오르를<br /><em>소개합니다</em></h2>
           <div className="intro-text">
