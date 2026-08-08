@@ -88,6 +88,13 @@ const restaurants = [
   { ko: "서울블랙", en: "Seoul Black", type: "KOREAN RESTAURANT" },
 ];
 
+const hotels = [
+  { name: "Limketkai Luxe Hotel", grade: "4성급", rooms: "218실", detail: "도심의 스카이라인을 완성하는 골드빛 랜드마크 호텔", image: "/hotel-limketkai.jpg" },
+  { name: "Seda Centrio Hotel", grade: "4성급", rooms: "147실", detail: "센트리오 몰과 연결된 편리한 도심형 호텔", image: "/hotel-seda-centrio.jpg" },
+  { name: "Dream Golftel", grade: "3성급", rooms: "42실", detail: "델몬테 골프장에서 약 5분 거리의 골프 특화 숙소", image: "/hotel-dream-golftel.jpg" },
+  { name: "Lohas Airport Hotel", grade: "3성급", rooms: "16실", detail: "라긴딩안 공항에서 약 5분 거리의 편리한 공항 호텔", image: "/hotel-lohas-airport.jpg" },
+];
+
 export default function Home() {
   return (
     <main>
@@ -259,9 +266,34 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="hotel-section" id="hotels">
+        <header className="hotel-header">
+          <div>
+            <p className="section-kicker">04 / STAY IN CDO</p>
+            <h2>여정에 맞춘<br /><em>네 가지 스테이</em></h2>
+          </div>
+          <p>도심 관광과 프리미엄 휴식, 골프 일정과 공항 이동까지 여행의 동선에 맞춰 선택하는 카가얀데오로의 주요 호텔입니다.</p>
+        </header>
+        <div className="hotel-grid">
+          {hotels.map((hotel, index) => (
+            <article className="hotel-card" key={hotel.name}>
+              <div className="hotel-image">
+                <Image src={hotel.image} alt={`${hotel.name} 대표 전경`} fill sizes="(max-width: 800px) 100vw, 50vw" />
+                <span>0{index + 1}</span>
+              </div>
+              <div className="hotel-copy">
+                <p>{hotel.grade} <i /> {hotel.rooms}</p>
+                <h3>{hotel.name}</h3>
+                <span>{hotel.detail}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="itinerary-section" id="itinerary">
         <header className="itinerary-header">
-          <p className="section-kicker">04 / ITINERARY</p>
+          <p className="section-kicker">05 / ITINERARY</p>
           <h2>3박 4일,<br /><em>낯선 도시를 탐구하는 여정</em></h2>
           <p>바다와 강의 모험부터 산과 자연, 프리미엄 골프까지 밀도 있게 연결한 카가얀데오로 팸투어 일정입니다.</p>
         </header>

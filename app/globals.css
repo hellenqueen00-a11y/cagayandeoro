@@ -110,6 +110,23 @@ h2 { margin: 0; font-size: clamp(46px, 6vw, 88px); line-height: .98; letter-spac
 .restaurant-item p { margin: 0; font: italic 16px Georgia, serif; letter-spacing: .02em; opacity: .62; }
 .restaurant-type { font-size: 8px; font-weight: 900; letter-spacing: .16em; }
 .restaurant-arrow { font-size: 25px; color: var(--green); }
+.hotel-section { padding: 120px 8vw; background: var(--green); color: white; }
+.hotel-header { display: grid; grid-template-columns: 1.35fr .65fr; gap: 8vw; align-items: end; padding-bottom: 72px; }
+.hotel-header h2 { margin-top: 22px; font-size: clamp(52px, 6.4vw, 94px); }
+.hotel-header h2 em { color: var(--yellow); }
+.hotel-header > p { max-width: 470px; margin: 0; line-height: 1.9; word-break: keep-all; opacity: .72; }
+.hotel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 24px; }
+.hotel-card { min-width: 0; }
+.hotel-image { position: relative; height: 390px; overflow: hidden; background: #0c2a20; }
+.hotel-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,34,26,.55), transparent 45%); }
+.hotel-image img { object-fit: cover; transition: transform .6s ease; }
+.hotel-card:hover .hotel-image img { transform: scale(1.035); }
+.hotel-image > span { position: absolute; z-index: 1; left: 24px; bottom: 20px; font: italic 34px Georgia, serif; color: var(--yellow); }
+.hotel-copy { padding: 24px 4px 0; }
+.hotel-copy > p { display: flex; align-items: center; gap: 10px; margin: 0 0 14px; color: var(--yellow); font-size: 9px; font-weight: 900; letter-spacing: .14em; }
+.hotel-copy > p i { width: 24px; height: 1px; background: currentColor; }
+.hotel-copy h3 { margin: 0 0 13px; font-size: clamp(27px, 3vw, 42px); letter-spacing: -.045em; }
+.hotel-copy > span { display: block; font-size: 13px; line-height: 1.7; opacity: .7; word-break: keep-all; }
 .itinerary-section { padding: 120px 8vw; background: var(--cream); }
 .itinerary-header { display: grid; grid-template-columns: .6fr 1.3fr 1fr; align-items: end; gap: 5vw; padding-bottom: 70px; }
 .itinerary-header h2 { font-size: clamp(48px, 5.6vw, 82px); }
@@ -178,6 +195,10 @@ footer h2 { font-size: clamp(46px, 5.5vw, 78px); margin-top: 25px; }
   .restaurant-item { grid-template-columns: 40px minmax(0, 1fr) 22px; gap: 14px; min-height: 96px; }
   .restaurant-type { display: none; }
   .restaurant-item h3 { font-size: 24px; }
+  .hotel-section { padding: 80px 24px; }
+  .hotel-header { grid-template-columns: 1fr; gap: 28px; padding-bottom: 52px; }
+  .hotel-grid { grid-template-columns: 1fr; gap: 42px; }
+  .hotel-image { height: 300px; }
   .itinerary-section { padding: 80px 24px; }
   .itinerary-header { grid-template-columns: 1fr; gap: 28px; padding-bottom: 50px; }
   .itinerary-summary { grid-template-columns: 1fr 1fr; }
