@@ -101,7 +101,7 @@ export default function Home() {
       <nav className="nav" aria-label="주요 메뉴">
         <a className="logo" href="#top" aria-label="CDO 팸투어 홈">
           <span className="logo-mark">C</span>
-          <span>CDO<br /><small>FAM TOUR 2026</small></span>
+          <span>CAGAYAN DE ORO<br /><small>FAM TOUR 2026</small></span>
         </a>
         <div className="nav-links">
           <a href="#experience">도시소개</a>
