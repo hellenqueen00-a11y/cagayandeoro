@@ -32,22 +32,15 @@ const destinationGroups = [
     number: "04",
     eyebrow: "CULTURE & LANDMARK",
     title: "문화와 랜드마크",
-    intro: "지역의 신앙과 이야기를 만나는 문화 여정으로 여행상품에 깊이와 의미를 더합니다.",
+    intro: "지역의 신앙과 이야기, 도시 전경과 야경을 함께 만나는 여정으로 여행상품에 깊이와 특별한 장면을 더합니다.",
     destinations: [
-      { title: "디바인 메르시 성지", image: "/divine-mercy.jpg", alt: "언덕 위의 디바인 메르시 성지", copy: "언덕 정상의 15m 예수상과 바다 전망이 인상적인 대표 순례지. 평화로운 분위기와 독특한 건축미를 만납니다.", tags: ["순례", "랜드마크", "전망"] },
+      { title: "디바인 메르시 성지 (Divine Mercy)", image: "/divine-mercy.jpg", alt: "언덕 위의 디바인 메르시 성지", copy: "언덕 정상의 15m 예수상과 바다 전망이 인상적인 대표 순례지. 평화로운 분위기와 독특한 건축미를 만납니다.", tags: ["순례", "랜드마크", "전망"] },
+      { title: "아마야 전망대 (Amaya View)", image: "/amaya-view.png", alt: "초록 숲과 도시 전경을 내려다보는 아마야 전망대", copy: "카가얀데오로의 도심과 주변 자연을 한눈에 조망하는 전망 명소. 탁 트인 풍경과 다양한 포토 스폿을 만납니다.", tags: ["파노라마", "전망대", "포토 스폿"] },
+      { title: "하이릿지 (High Ridge)", image: "/high-ridge.png", alt: "카가얀데오로 도심을 바라보는 하이릿지 레스토랑", copy: "도시의 전경과 야경을 감상하며 식사를 즐기는 도심 속 선셋 레스토랑. 여행의 저녁을 완성하는 특별한 장소입니다.", tags: ["선셋", "야경", "레스토랑"] },
     ],
   },
   {
     number: "05",
-    eyebrow: "FARM & LOCAL TASTE",
-    title: "농장과 로컬 체험",
-    intro: "세계적인 농업 자원과 현지의 신선한 맛을 여행 콘텐츠로 연결하는 특별한 로컬 경험입니다.",
-    destinations: [
-      { title: "델몬테 파인애플 농장", image: "/del-monte-pineapple.jpg", alt: "드넓게 펼쳐진 델몬테 파인애플 농장", copy: "약 2만 헥타르 규모의 광대한 농장에서 재배 현장을 둘러보고 갓 수확한 파인애플의 신선함을 맛봅니다.", tags: ["농장 투어", "로컬 미식", "산지 체험"] },
-    ],
-  },
-  {
-    number: "06",
     eyebrow: "PREMIUM GOLF",
     title: "프리미엄 골프",
     intro: "고원 자연과 오랜 전통이 어우러진 두 개의 골프 코스로 휴양형 프리미엄 상품을 완성합니다.",
