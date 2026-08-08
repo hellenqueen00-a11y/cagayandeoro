@@ -113,15 +113,10 @@ export default function Home() {
       </nav>
 
       <section className="hero" id="top">
-        <div className="sun" aria-label="Cagayan De Oro">
-          <div className="sun-logo">
-            <span>Cagayan</span>
-            <span>De Oro</span>
-          </div>
-        </div>
+        <div className="sun" aria-hidden="true" />
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
-          <p className="eyebrow"><span /> NORTHERN MINDANAO · PHILIPPINES</p>
+          <p className="eyebrow"><span /> CAGAYAN DE ORO · PHILIPPINES</p>
           <h1>낯선 도시의<br />가장 <em>빛나는</em> 순간.</h1>
           <p className="hero-description">산, 강, 바다 모든 곳이 어우러진<br />힐링과 모험의 숨은 여행지</p>
           <div className="hero-actions">
