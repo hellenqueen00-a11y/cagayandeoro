@@ -78,14 +78,14 @@ const itinerary = [
 ];
 
 const restaurants = [
-  { ko: "하이 릿지", en: "High Ridge" },
-  { ko: "리카도스", en: "Ricardo's" },
-  { ko: "팻 셰프", en: "Fat Chef" },
-  { ko: "써카 1850", en: "Circa 1850" },
-  { ko: "파나가탄", en: "Panagatan" },
-  { ko: "센트로", en: "Centro" },
-  { ko: "실버레인", en: "Silver Rain", type: "KOREAN RESTAURANT" },
-  { ko: "서울블랙", en: "Seoul Black", type: "KOREAN RESTAURANT" },
+  { ko: "하이 릿지", en: "High Ridge", place: "/dining-high-ridge-place.jpg", food: "/dining-high-ridge-food.jpg" },
+  { ko: "리카도스", en: "Ricardo's", place: "/dining-ricardos-place.jpg", food: "/dining-ricardos-food.jpg" },
+  { ko: "팻 셰프", en: "Fat Chef", place: "/dining-fat-chef-place.jpg", food: "/dining-fat-chef-food.jpg" },
+  { ko: "써카 1850", en: "Circa 1850", place: "/dining-circa-place.jpg", food: "/dining-circa-food.jpg" },
+  { ko: "파나가탄", en: "Panagatan", place: "/dining-panagatan-place.jpg", food: "/dining-panagatan-food.jpg" },
+  { ko: "센트로 1850", en: "Sentro 1850", place: "/dining-sentro-place.jpg", food: "/dining-sentro-food.jpg" },
+  { ko: "실버레인", en: "Silver Rain", type: "KOREAN RESTAURANT", place: "/dining-silver-rain-food.jpg", food: "/dining-silver-rain-food.jpg" },
+  { ko: "서울블랙", en: "Seoul Black", type: "KOREAN RESTAURANT", place: "/dining-seoul-black-place.jpg", food: "/dining-seoul-black-food.jpg" },
 ];
 
 const hotels = [
@@ -259,6 +259,10 @@ export default function Home() {
             <article className="restaurant-item" key={restaurant.en}>
               <span className="restaurant-number">{String(index + 1).padStart(2, "0")}</span>
               <div><h3>{restaurant.ko}</h3><p>{restaurant.en}</p></div>
+              <div className="restaurant-gallery">
+                <div><Image src={restaurant.place} alt={`${restaurant.ko} 외부 또는 매장 전경`} fill sizes="120px" /></div>
+                <div><Image src={restaurant.food} alt={`${restaurant.ko} 대표 음식`} fill sizes="120px" /></div>
+              </div>
               <span className="restaurant-type">{restaurant.type ?? "CDO DINING"}</span>
               <span className="restaurant-arrow">↗</span>
             </article>

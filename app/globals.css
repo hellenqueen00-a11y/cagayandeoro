@@ -103,11 +103,15 @@ h2 { margin: 0; font-size: clamp(46px, 6vw, 88px); line-height: .98; letter-spac
 .dining-header h2 em { color: var(--green); }
 .dining-header > p { max-width: 470px; margin: 0; line-height: 1.9; word-break: keep-all; opacity: .72; }
 .restaurant-list { border-top: 1px solid rgba(18,55,42,.45); }
-.restaurant-item { display: grid; grid-template-columns: 70px minmax(0, 1fr) 190px 30px; gap: 24px; align-items: center; min-height: 112px; border-bottom: 1px solid rgba(18,55,42,.35); transition: padding .25s ease, background .25s ease; }
+.restaurant-item { display: grid; grid-template-columns: 70px minmax(0, 1fr) 240px 170px 30px; gap: 24px; align-items: center; min-height: 148px; border-bottom: 1px solid rgba(18,55,42,.35); transition: padding .25s ease, background .25s ease; }
 .restaurant-item:hover { padding: 0 18px; background: rgba(246,242,223,.3); }
 .restaurant-number { font: italic 24px Georgia, serif; color: var(--green); }
 .restaurant-item h3 { margin: 0 0 6px; font-size: clamp(24px, 2.5vw, 38px); letter-spacing: -.045em; }
 .restaurant-item p { margin: 0; font: italic 16px Georgia, serif; letter-spacing: .02em; opacity: .62; }
+.restaurant-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; height: 112px; }
+.restaurant-gallery > div { position: relative; min-width: 0; overflow: hidden; }
+.restaurant-gallery img { object-fit: cover; transition: transform .4s ease; }
+.restaurant-item:hover .restaurant-gallery img { transform: scale(1.04); }
 .restaurant-type { font-size: 8px; font-weight: 900; letter-spacing: .16em; }
 .restaurant-arrow { font-size: 25px; color: var(--green); }
 .hotel-section { padding: 120px 8vw; background: var(--green); color: white; }
@@ -192,7 +196,8 @@ footer h2 { font-size: clamp(46px, 5.5vw, 78px); margin-top: 25px; }
   .destination-card-copy > p { min-height: 0; }
   .dining-section { padding: 80px 24px; }
   .dining-header { grid-template-columns: 1fr; gap: 28px; padding-bottom: 52px; }
-  .restaurant-item { grid-template-columns: 40px minmax(0, 1fr) 22px; gap: 14px; min-height: 96px; }
+  .restaurant-item { grid-template-columns: 40px minmax(0, 1fr) 22px; gap: 14px; min-height: 0; padding: 24px 0; }
+  .restaurant-gallery { grid-column: 2 / -1; grid-row: 2; height: 150px; }
   .restaurant-type { display: none; }
   .restaurant-item h3 { font-size: 24px; }
   .hotel-section { padding: 80px 24px; }
