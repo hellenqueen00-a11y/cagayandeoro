@@ -148,6 +148,9 @@ export default function Home() {
           <figcaption><span>ROUTE GUIDE</span> 마닐라 또는 세부를 경유하는 두 가지 여정</figcaption>
         </figure>
         <div className="intro-content">
+          <div className="city-wordmark">
+            <Image src="/cagayan-de-oro-wordmark.png" alt="컬러 Cagayan de Oro 워드마크" width={595} height={220} sizes="(max-width: 800px) 100vw, 420px" />
+          </div>
           <h2>카가얀데오르를<br /><em>소개합니다</em></h2>
           <div className="intro-text">
             <p>카가얀데오르(Cagayan De Oro)는 필리핀 북부 민다나오(Northern Mindanao)의 경제와 관광을 연결하는 관문 도시입니다. ‘우정의 도시(City of Golden Friendship)’라는 이름처럼 따뜻하고 친절하며, 여러 액티비티를 즐길 수 있는 역동적인 도시입니다.</p>
