@@ -6,7 +6,22 @@ const highlights = [
   { number: "03", title: "모험의 하루", copy: "시원한 워터래프팅부터 짜릿한 집라인까지 가슴 뛰는 새로운 경험을 만나는 하루", image: "/water-rafting.jpg", secondaryImage: "/zipline.webp", alt: "카가얀데오로 강의 워터래프팅", secondaryAlt: "다힐라얀의 짜릿한 집라인" },
 ];
 
-const destinationGroups = [
+type Destination = {
+  title: string;
+  image: string;
+  alt: string;
+  copy: string;
+  tags: string[];
+  gallery?: Array<{ src: string; alt: string }>;
+};
+
+const destinationGroups: Array<{
+  number: string;
+  eyebrow: string;
+  title: string;
+  intro: string;
+  destinations: Destination[];
+}> = [
   {
     number: "02",
     eyebrow: "RIVER & THRILL",
@@ -36,6 +51,11 @@ const destinationGroups = [
       { title: "디바인 메르시 성지 (Divine Mercy)", image: "/divine-mercy.jpg", alt: "언덕 위의 디바인 메르시 성지", copy: "언덕 정상의 15m 예수상과 바다 전망이 인상적인 대표 순례지. 평화로운 분위기와 독특한 건축미를 만납니다.", tags: ["순례", "랜드마크", "전망"] },
       { title: "아마야 전망대 (Amaya View)", image: "/amaya-view.png", alt: "초록 숲과 도시 전경을 내려다보는 아마야 전망대", copy: "카가얀데오로의 도심과 주변 자연을 한눈에 조망하는 전망 명소. 탁 트인 풍경과 다양한 포토 스폿을 만납니다.", tags: ["파노라마", "전망대", "포토 스폿"] },
       { title: "하이릿지 (High Ridge)", image: "/high-ridge.png", alt: "카가얀데오로 도심을 바라보는 하이릿지 레스토랑", copy: "도시의 전경과 야경을 감상하며 식사를 즐기는 도심 속 선셋 레스토랑. 여행의 저녁을 완성하는 특별한 장소입니다.", tags: ["선셋", "야경", "레스토랑"] },
+      { title: "쇼핑몰 & 다양한 로컬 맛집", image: "/local-food-crab.png", alt: "크랩과 다양한 필리핀 로컬 음식", copy: "도심 쇼핑몰과 맛집에서 신선한 크랩, 필리핀식 레촌, 숯불 향 가득한 이나살 치킨까지 다채로운 현지 미식을 경험합니다.", tags: ["쇼핑", "로컬 미식", "푸드 투어"], gallery: [
+        { src: "/local-food-crab.png", alt: "크랩과 레촌을 포함한 풍성한 로컬 음식 한 상" },
+        { src: "/inasal-chicken.png", alt: "숯불에 구운 필리핀 이나살 치킨" },
+        { src: "/local-food-selection.png", alt: "다양하게 차려진 필리핀 로컬 메뉴" },
+      ] },
     ],
   },
   {
@@ -174,9 +194,15 @@ export default function Home() {
             <div className="destination-grid">
               {group.destinations.map((destination) => (
                 <article className="destination-card" key={destination.title}>
-                  <div className="destination-card-image">
-                    <Image src={destination.image} alt={destination.alt} fill sizes="(max-width: 800px) 100vw, 40vw" />
-                  </div>
+                  {destination.gallery ? (
+                    <div className="destination-card-image food-gallery">
+                      {destination.gallery.map((photo) => <div key={photo.src}><Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 800px) 50vw, 20vw" /></div>)}
+                    </div>
+                  ) : (
+                    <div className="destination-card-image">
+                      <Image src={destination.image} alt={destination.alt} fill sizes="(max-width: 800px) 100vw, 40vw" />
+                    </div>
+                  )}
                   <div className="destination-card-copy">
                     <h3>{destination.title}</h3>
                     <p>{destination.copy}</p>
