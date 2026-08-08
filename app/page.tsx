@@ -6,6 +6,58 @@ const highlights = [
   { number: "03", title: "모험의 하루", copy: "시원한 워터래프팅부터 짜릿한 집라인까지 가슴 뛰는 새로운 경험을 만나는 하루", image: "/water-rafting.jpg", secondaryImage: "/zipline.webp", alt: "카가얀데오로 강의 워터래프팅", secondaryAlt: "다힐라얀의 짜릿한 집라인" },
 ];
 
+const destinationGroups = [
+  {
+    number: "02",
+    eyebrow: "WATERFALL & THRILL",
+    title: "폭포와 액티비티",
+    intro: "숨겨진 폭포의 장관부터 강과 고원을 가르는 짜릿한 도전까지, 카가얀데오로를 대표하는 모험의 여정입니다.",
+    destinations: [
+      { title: "티나고 폭포", image: "/tinago-falls.jpg", alt: "깊은 협곡 속 티나고 폭포", copy: "약 73m 높이의 웅장한 폭포와 에메랄드빛 천연 수영장. 400여 개의 계단 끝에서 만나는 신비로운 자연 명소입니다.", tags: ["폭포", "수영", "데이투어"] },
+      { title: "화이트 워터 래프팅", image: "/whitewater-rafting-pdf.jpg", alt: "카가얀강의 화이트 워터 래프팅", copy: "필리핀 래프팅의 성지로 불리는 카가얀강에서 열대 자연과 급류를 동시에 경험하는 대표 액티비티입니다.", tags: ["래프팅", "팀 액티비티", "반일"] },
+      { title: "다힐라얀 어드벤처 파크", image: "/dahilayan-park.jpg", alt: "다힐라얀 어드벤처 파크 집라인", copy: "해발 1,430m의 시원한 고원에서 집라인과 산악 액티비티를 즐기는 필리핀 대표 어드벤처 명소입니다.", tags: ["집라인", "고원", "가족 여행"] },
+    ],
+  },
+  {
+    number: "03",
+    eyebrow: "HIGHLAND & HEALING",
+    title: "고원과 힐링",
+    intro: "초록 능선과 서늘한 고원 기후, 여유로운 목장 풍경을 따라 자연의 속도로 쉬어가는 여행입니다.",
+    destinations: [
+      { title: "커뮤니얼 랜치", image: "/communal-ranch.jpg", alt: "초록 능선이 펼쳐진 커뮤니얼 랜치", copy: "뉴질랜드를 닮은 초록 언덕과 작은 호수가 펼쳐지는 목장. 승마와 드론 촬영, 자연 속 휴식에 어울립니다.", tags: ["승마", "포토 스폿", "자연 체험"] },
+      { title: "클라베리아", image: "/claveria-highlands.jpg", alt: "꽃과 산맥이 어우러진 클라베리아 고원", copy: "해발 600~950m의 청정 고원. 서늘한 기후와 꽃밭, 발라투칸 산맥의 풍경이 특별한 힐링 목적지입니다.", tags: ["고원", "트레킹", "생태 여행"] },
+    ],
+  },
+  {
+    number: "04",
+    eyebrow: "CULTURE & LANDMARK",
+    title: "문화와 랜드마크",
+    intro: "지역의 신앙과 이야기를 만나는 문화 여정으로 여행상품에 깊이와 의미를 더합니다.",
+    destinations: [
+      { title: "디바인 메르시 성지", image: "/divine-mercy.jpg", alt: "언덕 위의 디바인 메르시 성지", copy: "언덕 정상의 15m 예수상과 바다 전망이 인상적인 대표 순례지. 평화로운 분위기와 독특한 건축미를 만납니다.", tags: ["순례", "랜드마크", "전망"] },
+    ],
+  },
+  {
+    number: "05",
+    eyebrow: "FARM & LOCAL TASTE",
+    title: "농장과 로컬 체험",
+    intro: "세계적인 농업 자원과 현지의 신선한 맛을 여행 콘텐츠로 연결하는 특별한 로컬 경험입니다.",
+    destinations: [
+      { title: "델몬테 파인애플 농장", image: "/del-monte-pineapple.jpg", alt: "드넓게 펼쳐진 델몬테 파인애플 농장", copy: "약 2만 헥타르 규모의 광대한 농장에서 재배 현장을 둘러보고 갓 수확한 파인애플의 신선함을 맛봅니다.", tags: ["농장 투어", "로컬 미식", "산지 체험"] },
+    ],
+  },
+  {
+    number: "06",
+    eyebrow: "PREMIUM GOLF",
+    title: "프리미엄 골프",
+    intro: "고원 자연과 오랜 전통이 어우러진 두 개의 골프 코스로 휴양형 프리미엄 상품을 완성합니다.",
+    destinations: [
+      { title: "푸에블로 골프 코스", image: "/pueblo-golf.jpg", alt: "산악 고원에 자리한 푸에블로 골프 코스", copy: "로버트 트렌트 존스 주니어가 설계한 18홀 파72 코스. 넓은 페어웨이와 자연 협곡이 역동적인 플레이를 선사합니다.", tags: ["18홀", "파72", "챔피언십 코스"] },
+      { title: "델몬테 골프 코스", image: "/del-monte-golf.jpg", alt: "오랜 전통의 델몬테 골프 코스", copy: "1928년 문을 연 전통 깊은 18홀 파72 코스. 파인애플 농장 속 신선한 공기와 클래식한 라운딩을 즐깁니다.", tags: ["18홀", "파72", "헤리티지"] },
+    ],
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -119,6 +171,30 @@ export default function Home() {
             <div><Image src="/rohas-sunset.jpg" alt="잔잔한 바다 위로 지는 선셋" fill sizes="(max-width: 800px) 50vw, 21vw" /></div>
           </div>
         </article>
+
+        {destinationGroups.map((group) => (
+          <section className="destination-group" key={group.number}>
+            <div className="category-heading">
+              <span>{group.number}</span>
+              <div><p>{group.eyebrow}</p><h3>{group.title}</h3></div>
+              <p>{group.intro}</p>
+            </div>
+            <div className="destination-grid">
+              {group.destinations.map((destination) => (
+                <article className="destination-card" key={destination.title}>
+                  <div className="destination-card-image">
+                    <Image src={destination.image} alt={destination.alt} fill sizes="(max-width: 800px) 100vw, 40vw" />
+                  </div>
+                  <div className="destination-card-copy">
+                    <h3>{destination.title}</h3>
+                    <p>{destination.copy}</p>
+                    <div className="product-tags">{destination.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        ))}
       </section>
 
       <section className="quote">
