@@ -177,7 +177,7 @@ export default function Home() {
       <section className="destinations" id="schedule">
         <header className="destinations-header">
           <p className="section-kicker">02 / DESTINATION PORTFOLIO</p>
-          <h2>한 도시,<br /><em>여행의 모든 가능성</em></h2>
+          <h2>여행의<br /><em>모든 가능성이 열리는 도시</em></h2>
           <p>산과 강, 바다와 고원이 가까이 연결된 카가얀데오로. 다양한 여행상품으로 확장할 수 있는 새로운 목적지를 소개합니다.</p>
         </header>
 
