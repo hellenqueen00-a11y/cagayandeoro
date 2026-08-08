@@ -79,7 +79,7 @@ h2 { margin: 0; font-size: clamp(46px, 6vw, 88px); line-height: .98; letter-spac
 .product-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
 .product-tags span { padding: 8px 12px; border: 1px solid rgba(255,255,255,.3); border-radius: 99px; font-size: 10px; }
 .photo-mosaic { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 190px 190px; gap: 5px; min-width: 0; }
-.sunset-mosaic { grid-template-rows: 230px 230px; }
+.sunset-mosaic { grid-template-rows: 300px 300px; }
 .photo-mosaic > div { position: relative; overflow: hidden; min-width: 0; }
 .photo-mosaic .photo-main { grid-row: 1 / 3; }
 .photo-mosaic img { object-fit: cover; }
@@ -154,7 +154,7 @@ footer h2 { font-size: clamp(46px, 5.5vw, 78px); margin-top: 25px; }
   .destination-feature { grid-template-columns: 1fr; gap: 42px; padding: 64px 0; }
   .destination-feature.reverse .destination-copy, .destination-feature.reverse .photo-mosaic { order: initial; }
   .photo-mosaic { grid-template-rows: 150px 150px; }
-  .sunset-mosaic { grid-template-rows: 180px 180px; }
+  .sunset-mosaic { grid-template-rows: 234px 234px; }
   .destination-grid { grid-template-columns: 1fr; gap: 20px; padding: 38px 0 65px; }
   .destination-card:only-child { grid-column: auto; }
   .destination-card-image { height: 250px; }
