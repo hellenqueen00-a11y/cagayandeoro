@@ -98,9 +98,6 @@ const hotels = [
 export default function Home() {
   return (
     <main>
-      <div className="share-preview-fallback" aria-hidden="true">
-        <Image src="/share-cover-v3.png" alt="" width={1920} height={1008} priority unoptimized />
-      </div>
       <nav className="nav" aria-label="주요 메뉴">
         <a className="logo" href="#top" aria-label="CDO 팸투어 홈">
           <span className="logo-mark">C</span>
@@ -116,6 +113,7 @@ export default function Home() {
       </nav>
 
       <section className="hero" id="top">
+        <Image className="hero-social-cover" src="/hero-share-2400.png" alt="" width={2400} height={1260} priority unoptimized aria-hidden="true" />
         <div className="sun" aria-hidden="true" />
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
@@ -139,7 +137,7 @@ export default function Home() {
 
       <section className="manifesto" id="experience">
         <div className="section-kicker">01 / THE EXPERIENCE</div>
-        <figure className="route-map-figure">
+        <figure className="route-map-figure" data-nosnippet>
           <Image
             src="/flight-route-map.png"
             alt="인천에서 마닐라 또는 세부를 경유해 카가얀데오로로 이동하는 항공 노선도"

@@ -13,9 +13,9 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     type: "website",
     images: [{
-      url: "/share-cover-v3.png",
-      width: 1200,
-      height: 630,
+      url: "/hero-share-2400.png",
+      width: 2400,
+      height: 1260,
       alt: "낯선 도시의 가장 빛나는 순간, Cagayan De Oro",
       type: "image/png",
     }],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "낯선 도시의 가장 빛나는 순간",
     description: "힐링과 모험의 숨은 여행지, 카가얀데오로",
-    images: ["/share-cover-v3.png"],
+    images: ["/hero-share-2400.png"],
   },
 };
 
@@ -32,7 +32,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ko">
       <head>
-        <link rel="image_src" href="https://cagayandeoro.vercel.app/share-cover-v3.png" />
+        <link rel="image_src" href="https://cagayandeoro.vercel.app/hero-share-2400.png" />
       </head>
       <body>{children}</body>
     </html>
