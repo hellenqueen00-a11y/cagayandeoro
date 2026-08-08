@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const highlights = [
-  { number: "01", title: "콘텐츠가 되는 순간", copy: "래프팅부터 선셋까지, 촬영 포인트와 스토리라인을 함께 설계합니다." },
-  { number: "02", title: "현지에서 더 안전하게", copy: "검증된 로컬 파트너와 전 일정 전담 코디네이터가 동행합니다." },
-  { number: "03", title: "여행 이후까지", copy: "브랜드 협업과 후속 콘텐츠 활용까지 고려한 팸투어입니다." },
+  { number: "01", title: "바다의 하루", copy: "푸른 청정 바다의 신비한 자연을 즐기는 하루", image: "/underwater.jpg", alt: "열대어와 산호가 가득한 카가얀데오로의 푸른 바다" },
+  { number: "02", title: "힐링의 하루", copy: "도시 속 힐링 골프장, 자연과 여유를 즐기는 하루", image: "/golf-course.jpg", alt: "산과 숲으로 둘러싸인 카가얀데오로 골프장" },
+  { number: "03", title: "모험의 하루", copy: "시원한 워터래프팅부터 짜릿한 집라인까지 가슴 뛰는 새로운 경험을 만나는 하루", image: "/water-rafting.jpg", secondaryImage: "/zipline.webp", alt: "카가얀데오로 강의 워터래프팅", secondaryAlt: "다힐라얀의 짜릿한 집라인" },
 ];
 
 const itinerary = [
@@ -53,6 +53,16 @@ export default function Home() {
 
       <section className="manifesto" id="experience">
         <div className="section-kicker">01 / THE EXPERIENCE</div>
+        <figure className="route-map-figure">
+          <Image
+            src="/flight-route-map.png"
+            alt="인천에서 마닐라 또는 세부를 경유해 카가얀데오로로 이동하는 항공 노선도"
+            width={1536}
+            height={1024}
+            sizes="(max-width: 800px) 100vw, 42vw"
+          />
+          <figcaption><span>ROUTE GUIDE</span> 마닐라 또는 세부를 경유하는 두 가지 여정</figcaption>
+        </figure>
         <div className="intro-content">
           <h2>카가얀데오르를<br /><em>소개합니다</em></h2>
           <div className="intro-text">
@@ -60,24 +70,16 @@ export default function Home() {
             <p>인구 약 73만 명, 2024년 도시 GDP 약 7조 원, 경제성장률 6.8%를 기록한 성장 잠재 도시입니다. 자연 그대로의 도시에서 누리는 힐링과 골프, 스쿠버다이빙, 워터래프팅, 집라인 등 다양한 레저가 가능한 낯선 도시로 여러분을 초대합니다.</p>
           </div>
         </div>
-        <figure className="route-map-figure">
-          <Image
-            src="/flight-route-map.png"
-            alt="인천에서 마닐라 또는 세부를 경유해 카가얀데오로로 이동하는 항공 노선도"
-            width={1536}
-            height={1024}
-            sizes="(max-width: 800px) 100vw, 84vw"
-            priority
-          />
-          <figcaption><span>ROUTE GUIDE</span> 인천에서 카가얀데오로까지, 마닐라 또는 세부를 경유하는 두 가지 여정</figcaption>
-        </figure>
       </section>
 
       <section className="highlights">
         {highlights.map((item) => (
           <article className="highlight" key={item.number}>
             <span>{item.number}</span>
-            <div className="icon-shape" aria-hidden="true" />
+            <div className={`highlight-media ${item.secondaryImage ? "dual" : ""}`}>
+              <Image src={item.image} alt={item.alt} fill sizes="(max-width: 800px) 100vw, 33vw" />
+              {item.secondaryImage && <Image src={item.secondaryImage} alt={item.secondaryAlt ?? ""} fill sizes="(max-width: 800px) 50vw, 16vw" />}
+            </div>
             <h3>{item.title}</h3>
             <p>{item.copy}</p>
           </article>
