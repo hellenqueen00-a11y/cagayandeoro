@@ -12,11 +12,19 @@ export const metadata: Metadata = {
     siteName: "Cagayan De Oro Fam Tour 2026",
     locale: "ko_KR",
     type: "website",
+    images: [{
+      url: "/share-cover-v2.png",
+      width: 1200,
+      height: 630,
+      alt: "낯선 도시의 가장 빛나는 순간, Cagayan De Oro",
+      type: "image/png",
+    }],
   },
   twitter: {
     card: "summary_large_image",
     title: "낯선 도시의 가장 빛나는 순간",
     description: "힐링과 모험의 숨은 여행지, 카가얀데오로",
+    images: ["/share-cover-v2.png"],
   },
 };
 
