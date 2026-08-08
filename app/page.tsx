@@ -77,6 +77,17 @@ const itinerary = [
   { day: "DAY 4", title: "프리미엄 골프", theme: "PREMIUM GOLF & DEPARTURE", items: ["룩스 호텔 조식", "푸에블로 골프 코스 16홀 (골프팀)", "아마야 뷰 & 클라베리아 (관광팀)", "점심 · 실버레인 한식", "사격장", "저녁 · Circa", "공항 이동", "귀국"] },
 ];
 
+const restaurants = [
+  { ko: "하이 릿지", en: "High Ridge" },
+  { ko: "리카도스", en: "Ricardo's" },
+  { ko: "팻 셰프", en: "Fat Chef" },
+  { ko: "써카 1850", en: "Circa 1850" },
+  { ko: "파나가탄", en: "Panagatan" },
+  { ko: "센트로", en: "Centro" },
+  { ko: "실버레인", en: "Silver Rain", type: "KOREAN RESTAURANT" },
+  { ko: "서울블랙", en: "Seoul Black", type: "KOREAN RESTAURANT" },
+];
+
 export default function Home() {
   return (
     <main>
@@ -228,9 +239,29 @@ export default function Home() {
         ))}
       </section>
 
+      <section className="dining-section" id="dining">
+        <header className="dining-header">
+          <div>
+            <p className="section-kicker">03 / CDO DINING GUIDE</p>
+            <h2>카가얀데오로의<br /><em>맛있는 발견</em></h2>
+          </div>
+          <p>도시의 전망과 현지의 풍미, 여행 중 반가운 한식까지. 카가얀데오로에서 기억할 여덟 곳의 다이닝 스폿을 소개합니다.</p>
+        </header>
+        <div className="restaurant-list">
+          {restaurants.map((restaurant, index) => (
+            <article className="restaurant-item" key={restaurant.en}>
+              <span className="restaurant-number">{String(index + 1).padStart(2, "0")}</span>
+              <div><h3>{restaurant.ko}</h3><p>{restaurant.en}</p></div>
+              <span className="restaurant-type">{restaurant.type ?? "CDO DINING"}</span>
+              <span className="restaurant-arrow">↗</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="itinerary-section" id="itinerary">
         <header className="itinerary-header">
-          <p className="section-kicker">03 / ITINERARY</p>
+          <p className="section-kicker">04 / ITINERARY</p>
           <h2>3박 4일,<br /><em>낯선 도시를 탐구하는 여정</em></h2>
           <p>바다와 강의 모험부터 산과 자연, 프리미엄 골프까지 밀도 있게 연결한 카가얀데오로 팸투어 일정입니다.</p>
         </header>
