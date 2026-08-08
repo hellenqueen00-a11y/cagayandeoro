@@ -167,9 +167,7 @@ footer h2 { font-size: clamp(46px, 5.5vw, 78px); margin-top: 25px; }
   .nav { padding: 0 22px; } .nav-links { display: none; } .nav-cta { font-size: 11px; }
   .hero { min-height: 720px; padding: 110px 24px 40px; align-items: flex-start; padding-top: 180px; }
   .sun { width: 88vw; right: -28vw; top: 110px; }
-  .sun-logo { line-height: .76; transform: translateX(-8vw) rotate(-2deg); }
-  .sun-logo span { font-size: clamp(68px, 19vw, 106px); }
-  .sun-logo span:first-child { font-size: clamp(76px, 21vw, 118px); }
+  .sun-logo { display: none; }
   h1 { font-size: clamp(58px, 18vw, 86px); } .hero-description { font-size: 14px; }
   .hero-actions { flex-direction: column; align-items: flex-start; gap: 14px; }
   .route-card { right: 26px; bottom: 28px; width: 160px; padding: 16px; } .route-card strong { font-size: 17px; }
