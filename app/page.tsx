@@ -3,7 +3,7 @@ import Image from "next/image";
 const highlights = [
   { number: "01", title: "바다의 하루", copy: "푸른 청정 바다의 신비한 자연을 즐기는 하루", image: "/underwater.jpg", alt: "열대어와 산호가 가득한 카가얀데오로의 푸른 바다" },
   { number: "02", title: "힐링의 하루", copy: "도시 속 힐링 골프장, 자연과 여유를 즐기는 하루", image: "/golf-course.jpg", alt: "산과 숲으로 둘러싸인 카가얀데오로 골프장" },
-  { number: "03", title: "모험의 하루", copy: "시원한 워터래프팅부터 짜릿한 집라인까지 가슴 뛰는 새로운 경험을 만나는 하루", image: "/water-rafting.jpg", secondaryImage: "/zipline.webp", alt: "카가얀데오로 강의 워터래프팅", secondaryAlt: "다힐라얀의 짜릿한 집라인" },
+  { number: "03", title: "모험의 하루", copy: "시원한 워터래프팅부터 짜릿한 집라인까지 가슴 뛰는 새로운 경험을 만나는 하루", image: "/zipline.webp", alt: "다힐라얀의 짜릿한 집라인" },
 ];
 
 type Destination = {
