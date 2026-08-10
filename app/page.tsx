@@ -78,14 +78,14 @@ const itinerary = [
 ];
 
 const restaurants = [
-  { ko: "하이 릿지", en: "High Ridge", place: "/dining-high-ridge-place-new.png", food: "/dining-high-ridge-food.jpg" },
-  { ko: "리카도스", en: "Ricardo's", place: "/dining-ricardos-place-new.png", food: "/dining-ricardos-food.jpg" },
-  { ko: "팻 셰프", en: "Fat Chef", place: "/dining-fat-chef-place.jpg", food: "/dining-fat-chef-food.jpg" },
-  { ko: "써카 1850", en: "Circa 1850", place: "/dining-circa-place-new.png", food: "/dining-circa-food.jpg" },
-  { ko: "파나가탄", en: "Panagatan", place: "/dining-panagatan-place-new.png", food: "/dining-panagatan-food.jpg" },
-  { ko: "센트로 1850", en: "Sentro 1850", place: "/dining-sentro-place-new.png", food: "/dining-sentro-food.jpg" },
-  { ko: "실버레인", en: "Silver Rain", type: "KOREAN RESTAURANT", place: "/dining-silver-rain-menu-1.png", food: "/dining-silver-rain-menu-2.png" },
-  { ko: "서울블랙", en: "Seoul Black", type: "KOREAN RESTAURANT", place: "/dining-seoul-black-place.jpg", food: "/dining-seoul-black-food.jpg" },
+  { ko: "하이 릿지", en: "High Ridge", copy: "도시 야경을 바라보며 선셋 디너를 즐길 수 있는 뷰 맛집", place: "/dining-high-ridge-place-new.png", food: "/dining-high-ridge-food.jpg" },
+  { ko: "리카도스", en: "Ricardo's", copy: "다힐라얀의 멋진 산에 둘러싸인 산장 레스토랑", place: "/dining-ricardos-place-new.png", food: "/dining-ricardos-food.jpg" },
+  { ko: "팻 셰프", en: "Fat Chef", copy: "필리피노 전통 음식을 퓨전 스타일로 선보이는 곳", place: "/dining-fat-chef-place.jpg", food: "/dining-fat-chef-food.jpg" },
+  { ko: "써카 1850", en: "Circa 1850", copy: "카가얀데오로 No.1 맛집으로 손꼽히는 아메리칸 퓨전 레스토랑", place: "/dining-circa-place-new.png", food: "/dining-circa-food.jpg" },
+  { ko: "파나가탄", en: "Panagatan", copy: "해안가에 자리한 최고의 씨푸드(Seafood) 레스토랑", place: "/dining-panagatan-place-new.png", food: "/dining-panagatan-food.jpg" },
+  { ko: "센트로 1850", en: "Sentro 1850", copy: "필리피노 전통 음식을 모던하게 선보이는 맛집", place: "/dining-sentro-place-new.png", food: "/dining-sentro-food.jpg" },
+  { ko: "실버레인", en: "Silver Rain", copy: "풍성하고 다채로운 한식 메뉴를 선보이는 한식당", type: "KOREAN RESTAURANT", place: "/dining-silver-rain-menu-1.png", food: "/dining-silver-rain-menu-2.png" },
+  { ko: "서울블랙", en: "Seoul Black", copy: "프리미엄 한식 BBQ를 선보이는 프랜차이즈 한식당", type: "KOREAN RESTAURANT", place: "/dining-seoul-black-place.jpg", food: "/dining-seoul-black-food.jpg" },
 ];
 
 const hotels = [
@@ -256,7 +256,11 @@ export default function Home() {
           {restaurants.map((restaurant, index) => (
             <article className="restaurant-item" key={restaurant.en}>
               <span className="restaurant-number">{String(index + 1).padStart(2, "0")}</span>
-              <div><h3>{restaurant.ko}</h3><p>{restaurant.en}</p></div>
+              <div className="restaurant-name">
+                <h3>{restaurant.ko}</h3>
+                <p>{restaurant.en}</p>
+                <span>{restaurant.copy}</span>
+              </div>
               <div className="restaurant-gallery">
                 <div><Image src={restaurant.place} alt={`${restaurant.ko} 외부 또는 매장 전경`} fill sizes="120px" /></div>
                 <div><Image src={restaurant.food} alt={`${restaurant.ko} 대표 음식`} fill sizes="120px" /></div>

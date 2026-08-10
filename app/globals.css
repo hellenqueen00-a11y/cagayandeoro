@@ -107,6 +107,7 @@ h2 { margin: 0; font-size: clamp(46px, 6vw, 88px); line-height: .98; letter-spac
 .restaurant-number { font: italic 24px Georgia, serif; color: var(--green); }
 .restaurant-item h3 { margin: 0 0 6px; font-size: clamp(24px, 2.5vw, 38px); letter-spacing: -.045em; }
 .restaurant-item p { margin: 0; font: italic 16px Georgia, serif; letter-spacing: .02em; opacity: .62; }
+.restaurant-name > span { display: block; max-width: 430px; margin-top: 13px; font-size: 13px; line-height: 1.65; letter-spacing: -.01em; opacity: .78; word-break: keep-all; }
 .restaurant-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; height: 112px; }
 .restaurant-gallery > div { position: relative; min-width: 0; overflow: hidden; }
 .restaurant-gallery img { object-fit: cover; transition: transform .4s ease; }
