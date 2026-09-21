@@ -114,12 +114,12 @@ const restaurants = [
 ];
 
 const hotels = [
-  { name: "Limketkai Luxe Hotel", grade: "4성급", rooms: "218실", detail: "도심의 스카이라인을 완성하는 골드빛 랜드마크 호텔", image: "/hotel-limketkai.jpg" },
-  { name: "Seda Centrio Hotel", grade: "4성급", rooms: "147실", detail: "센트리오 몰과 연결된 편리한 도심형 호텔", image: "/hotel-seda-centrio.jpg" },
-  { name: "Dream Golftel", grade: "3성급", rooms: "42실", detail: "델몬테 골프장에서 약 5분 거리의 골프 특화 숙소", image: "/hotel-dream-golftel-new.png" },
-  { name: "Lohas Airport Hotel", grade: "3성급", rooms: "16실", detail: "라긴딩안 공항에서 약 5분 거리의 편리한 공항 호텔", image: "/hotel-lohas-airport-new.png" },
-  { name: "Ultra Winds Mountain Resort", grade: "MOUNTAIN RESORT", rooms: "INFINITY POOL", detail: "사방이 산으로 둘러싸인 풍경과 탁 트인 인피니티 풀을 갖춘 고원형 휴양 리조트", image: "/hotel-ultra-winds-pool.png", secondaryImage: "/hotel-ultra-winds-room.png" },
-  { name: "Chali Beach Resort", grade: "BEACH RESORT", rooms: "CITY ACCESS", detail: "카가얀데오로 시내에서 가까우면서 해변의 여유와 수영장을 함께 즐길 수 있는 비치 호텔", image: "/hotel-chali-beach.png", secondaryImage: "/hotel-chali-room.png", thirdImage: "/hotel-chali-pool.png" },
+  { name: "Limketkai Luxe Hotel", grade: "4성급", rooms: "218실", detail: "도심의 스카이라인을 완성하는 골드빛 랜드마크 호텔", image: "/hotel-limketkai.jpg", url: "https://limketkailuxe.com/" },
+  { name: "Seda Centrio Hotel", grade: "4성급", rooms: "147실", detail: "센트리오 몰과 연결된 편리한 도심형 호텔", image: "/hotel-seda-centrio.jpg", url: "https://www.facebook.com/sedacentriohotel/" },
+  { name: "Dream Golftel", grade: "3성급", rooms: "42실", detail: "델몬테 골프장에서 약 5분 거리의 골프 특화 숙소", image: "/hotel-dream-golftel-new.png", url: "https://dreamgolftel.com/" },
+  { name: "Lohas Airport Hotel", grade: "3성급", rooms: "16실", detail: "라긴딩안 공항에서 약 5분 거리의 편리한 공항 호텔", image: "/hotel-lohas-airport-new.png", url: "https://www.facebook.com/LohasHotel/" },
+  { name: "Ultra Winds Mountain Resort", grade: "MOUNTAIN RESORT", rooms: "INFINITY POOL", detail: "사방이 산으로 둘러싸인 풍경과 탁 트인 인피니티 풀을 갖춘 고원형 휴양 리조트", image: "/hotel-ultra-winds-pool.png", secondaryImage: "/hotel-ultra-winds-room.png", url: "https://www.ultrawindsresort.com/" },
+  { name: "Chali Beach Resort", grade: "BEACH RESORT", rooms: "CITY ACCESS", detail: "카가얀데오로 시내에서 가까우면서 해변의 여유와 수영장을 함께 즐길 수 있는 비치 호텔", image: "/hotel-chali-beach.png", secondaryImage: "/hotel-chali-room.png", thirdImage: "/hotel-chali-pool.png", url: "https://www.chaliresort.com/" },
 ];
 
 export default function Home() {
@@ -359,6 +359,7 @@ export default function Home() {
                 <p>{hotel.grade} <i /> {hotel.rooms}</p>
                 <h3>{hotel.name}</h3>
                 <span>{hotel.detail}</span>
+                <a className="hotel-link" href={hotel.url} target="_blank" rel="noopener noreferrer">{hotel.url.includes("facebook.com") ? "페이스북 보기" : "홈페이지 보기"} <b>↗</b></a>
               </div>
             </article>
           ))}
