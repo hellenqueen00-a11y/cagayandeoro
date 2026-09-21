@@ -111,6 +111,7 @@ const restaurants = [
   { ko: "쿠치나 히갈라", en: "Cucina Higala", copy: "Tripadvisor Best에 선정된 카가얀데오로의 대표 필리피노 레스토랑", place: "/dining-cucina-higala-place.png", food: "/dining-cucina-higala-food.png" },
   { ko: "챱챱", en: "Chop Chop", copy: "델몬테 골프장 인근에서 만나는 유일한 한식당", type: "KOREAN RESTAURANT", place: "/dining-chop-chop-place.jpg", food: "/dining-chop-chop-food.png" },
   { ko: "레드 샤브샤브 타이완", en: "Red Shabu-Shabu Taiwan", copy: "한국인의 입맛에도 잘 맞는 푸짐하고 따뜻한 대만식 샤브샤브", type: "TAIWANESE SHABU-SHABU", place: "/dining-red-shabu-place.png", food: "/dining-red-shabu-food.png" },
+  { ko: "H 프로퍼 카페", en: "H Proper Cafe", copy: "스페셜티 커피와 브런치, 다채로운 양식을 함께 즐기는 감각적인 다이닝 카페", type: "CAFE & BISTRO", place: "/dining-h-proper-place.png", food: "/dining-h-proper-food.png", url: "https://www.hproper.com/" },
 ];
 
 const hotels = [
@@ -326,7 +327,11 @@ export default function Home() {
                 <div><Image src={restaurant.food} alt={`${restaurant.ko} 대표 음식`} fill sizes="120px" /></div>
               </div>
               <span className="restaurant-type">{restaurant.type ?? "CDO DINING"}</span>
-              <span className="restaurant-arrow">↗</span>
+              {restaurant.url ? (
+                <a className="restaurant-arrow" href={restaurant.url} target="_blank" rel="noopener noreferrer" aria-label={`${restaurant.en} 홈페이지 열기`}>↗</a>
+              ) : (
+                <span className="restaurant-arrow">↗</span>
+              )}
             </article>
           ))}
         </div>
