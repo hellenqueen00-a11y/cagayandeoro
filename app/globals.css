@@ -134,6 +134,8 @@ h2 { margin: 0; font-size: clamp(46px, 6vw, 88px); line-height: .98; letter-spac
 .hotel-image { position: relative; height: 390px; overflow: hidden; background: #0c2a20; }
 .hotel-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,34,26,.55), transparent 45%); }
 .hotel-image img { object-fit: cover; transition: transform .6s ease; }
+.hotel-image-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; height: 100%; }
+.hotel-image-pair > div { position: relative; min-width: 0; overflow: hidden; }
 .hotel-card:hover .hotel-image img { transform: scale(1.035); }
 .hotel-image > span { position: absolute; z-index: 1; left: 24px; bottom: 20px; font: italic 34px Georgia, serif; color: var(--yellow); }
 .hotel-copy { padding: 24px 4px 0; }

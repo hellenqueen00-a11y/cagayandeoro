@@ -118,6 +118,7 @@ const hotels = [
   { name: "Seda Centrio Hotel", grade: "4성급", rooms: "147실", detail: "센트리오 몰과 연결된 편리한 도심형 호텔", image: "/hotel-seda-centrio.jpg" },
   { name: "Dream Golftel", grade: "3성급", rooms: "42실", detail: "델몬테 골프장에서 약 5분 거리의 골프 특화 숙소", image: "/hotel-dream-golftel-new.png" },
   { name: "Lohas Airport Hotel", grade: "3성급", rooms: "16실", detail: "라긴딩안 공항에서 약 5분 거리의 편리한 공항 호텔", image: "/hotel-lohas-airport-new.png" },
+  { name: "Ultra Winds Mountain Resort", grade: "MOUNTAIN RESORT", rooms: "INFINITY POOL", detail: "사방이 산으로 둘러싸인 풍경과 탁 트인 인피니티 풀을 갖춘 고원형 휴양 리조트", image: "/hotel-ultra-winds-pool.png", secondaryImage: "/hotel-ultra-winds-room.png" },
 ];
 
 export default function Home() {
@@ -342,7 +343,14 @@ export default function Home() {
           {hotels.map((hotel, index) => (
             <article className="hotel-card" key={hotel.name}>
               <div className="hotel-image">
-                <Image src={hotel.image} alt={`${hotel.name} 대표 전경`} fill sizes="(max-width: 800px) 100vw, 50vw" />
+                {hotel.secondaryImage ? (
+                  <div className="hotel-image-pair">
+                    <div><Image src={hotel.image} alt={`${hotel.name} 인피니티 풀`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>
+                    <div><Image src={hotel.secondaryImage} alt={`${hotel.name} 객실`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>
+                  </div>
+                ) : (
+                  <Image src={hotel.image} alt={`${hotel.name} 대표 전경`} fill sizes="(max-width: 800px) 100vw, 50vw" />
+                )}
                 <span>0{index + 1}</span>
               </div>
               <div className="hotel-copy">
