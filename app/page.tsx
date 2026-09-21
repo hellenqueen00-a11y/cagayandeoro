@@ -111,6 +111,7 @@ const restaurants = [
   { ko: "센트로", en: "Sentro", copy: "세련된 공간에서 스테이크와 다양한 양식 메뉴를 즐기는 도심 레스토랑", place: "/dining-sentro-place.png", food: "/dining-sentro-food.png" },
   { ko: "쿠치나 히갈라", en: "Cucina Higala", copy: "Tripadvisor Best에 선정된 카가얀데오로의 대표 필리피노 레스토랑", place: "/dining-cucina-higala-place.png", food: "/dining-cucina-higala-food.png" },
   { ko: "챱챱", en: "Chop Chop", copy: "델몬테 골프장 인근에서 만나는 유일한 한식당", type: "KOREAN RESTAURANT", place: "/dining-chop-chop-place.jpg", food: "/dining-chop-chop-food.png" },
+  { ko: "레드 샤브샤브 타이완", en: "Red Shabu-Shabu Taiwan", copy: "한국인의 입맛에도 잘 맞는 푸짐하고 따뜻한 대만식 샤브샤브", type: "TAIWANESE SHABU-SHABU", place: "/dining-red-shabu-place.png", food: "/dining-red-shabu-food.png" },
 ];
 
 const hotels = [
