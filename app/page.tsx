@@ -336,7 +336,7 @@ export default function Home() {
         <header className="hotel-header">
           <div>
             <p className="section-kicker">04 / STAY IN CDO</p>
-            <h2>여정에 맞춘<br /><em>네 가지 스테이</em></h2>
+            <h2>여정에 맞춘<br /><em>다양한 스테이</em></h2>
           </div>
           <p>도심 관광과 프리미엄 휴식, 골프 일정과 공항 이동까지 여행의 동선에 맞춰 선택하는 카가얀데오로의 주요 호텔입니다.</p>
         </header>
