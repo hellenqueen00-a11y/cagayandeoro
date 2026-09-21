@@ -119,6 +119,7 @@ const hotels = [
   { name: "Dream Golftel", grade: "3성급", rooms: "42실", detail: "델몬테 골프장에서 약 5분 거리의 골프 특화 숙소", image: "/hotel-dream-golftel-new.png" },
   { name: "Lohas Airport Hotel", grade: "3성급", rooms: "16실", detail: "라긴딩안 공항에서 약 5분 거리의 편리한 공항 호텔", image: "/hotel-lohas-airport-new.png" },
   { name: "Ultra Winds Mountain Resort", grade: "MOUNTAIN RESORT", rooms: "INFINITY POOL", detail: "사방이 산으로 둘러싸인 풍경과 탁 트인 인피니티 풀을 갖춘 고원형 휴양 리조트", image: "/hotel-ultra-winds-pool.png", secondaryImage: "/hotel-ultra-winds-room.png" },
+  { name: "Chali Beach Resort", grade: "BEACH RESORT", rooms: "CITY ACCESS", detail: "카가얀데오로 시내에서 가까우면서 해변의 여유와 수영장을 함께 즐길 수 있는 비치 호텔", image: "/hotel-chali-beach.png", secondaryImage: "/hotel-chali-room.png", thirdImage: "/hotel-chali-pool.png" },
 ];
 
 export default function Home() {
@@ -344,9 +345,10 @@ export default function Home() {
             <article className="hotel-card" key={hotel.name}>
               <div className="hotel-image">
                 {hotel.secondaryImage ? (
-                  <div className="hotel-image-pair">
-                    <div><Image src={hotel.image} alt={`${hotel.name} 인피니티 풀`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>
+                  <div className={`hotel-image-pair${hotel.thirdImage ? " hotel-image-trio" : ""}`}>
+                    <div><Image src={hotel.image} alt={`${hotel.name} ${hotel.thirdImage ? "해변 다이닝 전경" : "인피니티 풀"}`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>
                     <div><Image src={hotel.secondaryImage} alt={`${hotel.name} 객실`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>
+                    {hotel.thirdImage && <div><Image src={hotel.thirdImage} alt={`${hotel.name} 수영장`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>}
                   </div>
                 ) : (
                   <Image src={hotel.image} alt={`${hotel.name} 대표 전경`} fill sizes="(max-width: 800px) 100vw, 50vw" />
