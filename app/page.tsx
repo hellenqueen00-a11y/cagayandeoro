@@ -108,6 +108,7 @@ const restaurants = [
   { ko: "센트로 1850", en: "Sentro 1850", copy: "필리피노 전통 음식을 모던하게 선보이는 맛집", place: "/dining-sentro-place-new.png", food: "/dining-sentro-food.jpg" },
   { ko: "실버레인", en: "Silver Rain", copy: "풍성하고 다채로운 한식 메뉴를 선보이는 한식당", type: "KOREAN RESTAURANT", place: "/dining-silver-rain-menu-1.png", food: "/dining-silver-rain-menu-2.png" },
   { ko: "서울블랙", en: "Seoul Black", copy: "프리미엄 한식 BBQ를 선보이는 프랜차이즈 한식당", type: "KOREAN RESTAURANT", place: "/dining-seoul-black-place.jpg", food: "/dining-seoul-black-food.jpg" },
+  { ko: "센트로", en: "Sentro", copy: "세련된 공간에서 스테이크와 다양한 양식 메뉴를 즐기는 도심 레스토랑", place: "/dining-sentro-place.png", food: "/dining-sentro-food.png" },
 ];
 
 const hotels = [
