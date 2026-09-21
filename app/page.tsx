@@ -110,6 +110,7 @@ const restaurants = [
   { ko: "서울블랙", en: "Seoul Black", copy: "프리미엄 한식 BBQ를 선보이는 프랜차이즈 한식당", type: "KOREAN RESTAURANT", place: "/dining-seoul-black-place.jpg", food: "/dining-seoul-black-food.jpg" },
   { ko: "센트로", en: "Sentro", copy: "세련된 공간에서 스테이크와 다양한 양식 메뉴를 즐기는 도심 레스토랑", place: "/dining-sentro-place.png", food: "/dining-sentro-food.png" },
   { ko: "쿠치나 히갈라", en: "Cucina Higala", copy: "Tripadvisor Best에 선정된 카가얀데오로의 대표 필리피노 레스토랑", place: "/dining-cucina-higala-place.png", food: "/dining-cucina-higala-food.png" },
+  { ko: "챱챱", en: "Chop Chop", copy: "델몬테 골프장 인근에서 만나는 유일한 한식당", type: "KOREAN RESTAURANT", place: "/dining-chop-chop-place.jpg", food: "/dining-chop-chop-food.png" },
 ];
 
 const hotels = [
