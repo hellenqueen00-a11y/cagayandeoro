@@ -108,7 +108,6 @@ const restaurants = [
   { ko: "센트로 1850", en: "Sentro 1850", copy: "필리피노 전통 음식을 모던하게 선보이는 맛집", place: "/dining-sentro-place-new.png", food: "/dining-sentro-food.jpg" },
   { ko: "실버레인", en: "Silver Rain", copy: "풍성하고 다채로운 한식 메뉴를 선보이는 한식당", type: "KOREAN RESTAURANT", place: "/dining-silver-rain-menu-1.png", food: "/dining-silver-rain-menu-2.png" },
   { ko: "서울블랙", en: "Seoul Black", copy: "프리미엄 한식 BBQ를 선보이는 프랜차이즈 한식당", type: "KOREAN RESTAURANT", place: "/dining-seoul-black-place.jpg", food: "/dining-seoul-black-food.jpg" },
-  { ko: "센트로", en: "Sentro", copy: "세련된 공간에서 스테이크와 다양한 양식 메뉴를 즐기는 도심 레스토랑", place: "/dining-sentro-place.png", food: "/dining-sentro-food.png" },
   { ko: "쿠치나 히갈라", en: "Cucina Higala", copy: "Tripadvisor Best에 선정된 카가얀데오로의 대표 필리피노 레스토랑", place: "/dining-cucina-higala-place.png", food: "/dining-cucina-higala-food.png" },
   { ko: "챱챱", en: "Chop Chop", copy: "델몬테 골프장 인근에서 만나는 유일한 한식당", type: "KOREAN RESTAURANT", place: "/dining-chop-chop-place.jpg", food: "/dining-chop-chop-food.png" },
   { ko: "레드 샤브샤브 타이완", en: "Red Shabu-Shabu Taiwan", copy: "한국인의 입맛에도 잘 맞는 푸짐하고 따뜻한 대만식 샤브샤브", type: "TAIWANESE SHABU-SHABU", place: "/dining-red-shabu-place.png", food: "/dining-red-shabu-food.png" },
