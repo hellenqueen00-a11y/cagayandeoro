@@ -164,7 +164,12 @@ h2 { margin: 0; font-size: clamp(46px, 6vw, 88px); line-height: .98; letter-spac
 .itinerary-card-top > span { padding-top: 3px; font-size: 17px; font-weight: 700; white-space: nowrap; color: var(--green); }
 .itinerary-card-top small { display: block; margin: 3px 0 8px; font-size: 8px; font-weight: 900; letter-spacing: .16em; opacity: .55; }
 .itinerary-card h3 { margin: 0; font-size: 22px; letter-spacing: -.035em; word-break: keep-all; overflow-wrap: anywhere; }
-.itinerary-card ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 26px; }
+.itinerary-card ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr; gap: 9px; }
+.itinerary-periods { display: grid; gap: 20px; min-width: 0; }
+.itinerary-period { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 16px; border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+.itinerary-period h4 { margin: 0; font-size: 13px; line-height: 1.55; color: var(--green); }
+.itinerary-hotel { display: flex; gap: 16px; margin: 0; font-size: 13px; }
+.itinerary-hotel strong { min-width: 42px; color: var(--green); }
 .itinerary-card li { padding-left: 16px; position: relative; font-size: 13px; line-height: 1.55; }
 .itinerary-card li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--yellow); position: absolute; left: 0; top: .6em; }
 .itinerary-day { justify-self: end; padding-top: 7px; font-size: 9px; font-weight: 900; letter-spacing: .18em; color: var(--green); }

@@ -104,12 +104,7 @@ extensionDestinations.push({
   ],
 });
 
-const itinerary = [
-  { day: "DAY 1", date: "9.30 (수)", title: "카가얀데오로 도착", theme: "ARRIVAL", items: ["인천 공항 → 라긴딩안 공항", "룩스 호텔"] },
-  { day: "DAY 2", date: "10.1 (목)", title: "명소와 바다", theme: "CITY & SEA", items: ["사격장", "디바인 메르시 성지", "로하스 에어포트 호텔", "로하스 아쿠아 리조트", "룩스 호텔", "하이릿지", "야시장 (선택)"] },
-  { day: "DAY 3", date: "10.2 (금)", title: "골프·클라베리아·래프팅", theme: "GOLF · CLAVERIA · RAFTING", items: ["골프팀 · 푸에블로 골프 코스·클럽하우스", "관광팀 · 클라베리아", "화이트 워터 래프팅", "드림 골프텔"] },
-  { day: "DAY 4", date: "10.3 (토)", title: "골프, 어드벤처와 마운틴 힐링", theme: "GOLF · ADVENTURE · MOUNTAIN", items: ["골프팀 · 델몬테 골프 코스", "관광팀 · 커뮤니얼 랜치", "리카도스 레스토랑", "다힐라얀 어드벤처 파크", "라긴딩안 공항 → 한국"] },
-];
+const itinerary = [{"day":"DAY 1","date":"9.30 (수)","title":"카가얀데오로 도착","theme":"ARRIVAL","hotel":"룩스 호텔","periods":[{"label":"오전","items":["인천 공항 출발"]},{"label":"오후","items":["16:45 라긴딩안 공항 도착","17:00 환영 인사 후 카가얀데오로 이동","18:00 룩스 호텔 체크인"]},{"label":"저녁","items":["18:00 카가얀데오로 시장 주최 환영 만찬"]},{"label":"밤","items":["21:00 호텔 휴식"]}]},{"day":"DAY 2","date":"10.1 (목)","title":"명소와 바다","theme":"CITY & SEA","hotel":"룩스 호텔","periods":[{"label":"오전","items":["07:00 조식","08:00 사격장 이동","08:30–09:30 사격장 체험","09:30 디바인 메르시 성지로 출발","10:00–10:40 디바인 메르시 성지 방문","11:00 로하스 에어포트 호텔 도착"]},{"label":"점심","items":["11:30 로하스 아쿠아 리조트 · 시푸드 부들 파이트"]},{"label":"오후","items":["12:30 씨워킹·맹그로브 투어·바나나보트·스노클링·제트스키","15:00 룩스 호텔 복귀"]},{"label":"저녁","items":["17:00 하이릿지로 출발","17:30 하이릿지 선셋 디너"]},{"label":"밤","items":["야시장 투어 (선택)"]}]},{"day":"DAY 3","date":"10.2 (금)","title":"골프·클라베리아·래프팅","theme":"GOLF · CLAVERIA · RAFTING","hotel":"드림 골프텔","periods":[{"label":"오전","items":["06:00 조식","07:00 룩스 호텔 체크아웃","07:30 A팀 · 푸에블로 골프 / B팀 · 클라베리아 투어"]},{"label":"점심","items":["11:00 B팀 · 클라베리아에서 점심","12:00 A팀 · 푸에블로 클럽하우스에서 점심","12:00 B팀 · 카가얀데오로로 출발"]},{"label":"오후","items":["13:00 화이트 워터 래프팅 픽업 · 푸에블로에서 환복","14:00 래프팅 시작","16:30 래프팅 종료"]},{"label":"저녁","items":["18:00 Governor’s Night"]},{"label":"밤","items":["20:30 델몬테로 출발","22:00 드림 골프텔 체크인 및 휴식"]}]},{"day":"DAY 4","date":"10.3 (토)","title":"골프, 어드벤처와 마운틴 힐링","theme":"GOLF · ADVENTURE · MOUNTAIN","hotel":null,"periods":[{"label":"오전","items":["06:00 드림 골프텔 조식","07:00–11:00 A팀 · 델몬테 골프 후 샤워·호텔 체크아웃","08:00–11:00 B팀 · 호텔 체크아웃 및 커뮤니얼 랜치"]},{"label":"점심","items":["12:00 리카도스 레스토랑"]},{"label":"오후","items":["13:00 다힐라얀 어드벤처 파크","15:00 라긴딩안 공항으로 출발"]},{"label":"저녁","items":["17:00 Aboitiz 미팅"]},{"label":"밤","items":["19:00 한국으로 출발"]}]}];
 
 const restaurants = [
   { ko: "하이 릿지", en: "High Ridge", copy: "도시 야경을 바라보며 선셋 디너를 즐길 수 있는 뷰 맛집", place: "/dining-high-ridge-place-new.png", food: "/dining-high-ridge-food.jpg" },
@@ -388,7 +383,7 @@ export default function Home() {
         <header className="itinerary-header">
           <p className="section-kicker">05 / ITINERARY</p>
           <h2>3박 4일,<br /><em>낯선 도시를 탐구하는 여정</em></h2>
-          <p>9월 30일부터 10월 3일까지, 날짜별 주요 행선지를 한눈에 살펴보세요.</p>
+          <p>9월 30일부터 10월 3일까지, 날짜와 시간대별 일정을 살펴보세요. A팀은 골프, B팀은 관광 일정으로 진행합니다.</p>
         </header>
         <div className="itinerary-summary" aria-label="여행 일정 요약">
           <div><strong>3</strong><span>NIGHTS</span></div>
@@ -403,7 +398,15 @@ export default function Home() {
                 <span>{item.date}</span>
                 <div><small>{item.theme}</small><h3>{item.title}</h3></div>
               </div>
-              <ul>{item.items.map((detail) => <li key={detail}>{detail}</li>)}</ul>
+              <div className="itinerary-periods">
+                {item.periods.map((period) => (
+                  <section className="itinerary-period" key={period.label} aria-label={`${item.date} ${period.label}`}>
+                    <h4>{period.label}</h4>
+                    <ul>{period.items.map((detail) => <li key={detail}>{detail}</li>)}</ul>
+                  </section>
+                ))}
+                {item.hotel && <p className="itinerary-hotel"><strong>숙소</strong>{item.hotel}</p>}
+              </div>
               <div className="itinerary-day">{item.day}</div>
             </article>
           ))}
