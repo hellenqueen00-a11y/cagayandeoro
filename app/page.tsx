@@ -79,8 +79,8 @@ const extensionDestinations: Array<{ eyebrow: string; title: string; intro: stri
     title: "폭포",
     intro: "울창한 협곡과 차가운 천연수가 빚어낸 북부 민다나오의 숨은 자연 명소입니다.",
     destinations: [
-      { title: "Tinago Falls", image: "/extension-tinago-falls.jpg", alt: "울창한 협곡과 에메랄드빛 물이 어우러진 Tinago Falls", copy: "깊은 협곡 아래로 거대한 물줄기가 쏟아지는 일리간의 대표 폭포. 계단을 내려가 만나는 청록빛 천연 수영장과 대나무 뗏목 체험이 특별합니다.", tags: ["추천 연계 코스", "폭포", "일리간"], credit: "PHOTO · DEPARTMENT OF TOURISM PHILIPPINES" },
-      { title: "Sinulom Falls & Bolao Cold Spring", image: "/extension-sinulom-falls.jpg", alt: "초록 절벽을 따라 흐르는 Sinulom Falls와 Bolao Cold Spring", copy: "여러 갈래의 폭포수가 숲속 절벽을 따라 흐르는 생태 명소. 가까운 Bolao 천연 냉천과 함께 시원한 자연 속 휴식을 즐길 수 있습니다.", tags: ["추천 연계 코스", "폭포·냉천", "생태 여행"], credit: "PHOTO · SINULOM FALLS" },
+      { title: "Tinago Falls", image: "/extension-tinago-falls.jpg", alt: "울창한 협곡과 에메랄드빛 물이 어우러진 Tinago Falls", copy: "깊은 협곡 아래로 거대한 물줄기가 쏟아지는 일리간의 대표 폭포. 계단을 내려가 만나는 청록빛 천연 수영장과 대나무 뗏목 체험이 특별합니다. 카가얀데오르에서 차로 2시간 소요됩니다.", tags: ["추천 연계 코스", "폭포", "일리간"], credit: "PHOTO · DEPARTMENT OF TOURISM PHILIPPINES" },
+      { title: "Sinulom Falls & Bolao Cold Spring", image: "/extension-sinulom-falls.jpg", alt: "초록 절벽을 따라 흐르는 Sinulom Falls와 Bolao Cold Spring", copy: "여러 갈래의 폭포수가 숲속 절벽을 따라 흐르는 생태 명소. 가까운 Bolao 천연 냉천과 함께 시원한 자연 속 휴식을 즐길 수 있습니다. 시내에서 30분 거리의 가까운 폭포입니다.", tags: ["추천 연계 코스", "폭포·냉천", "생태 여행"], credit: "PHOTO · SINULOM FALLS" },
     ] satisfies Destination[],
   },
   {
@@ -88,8 +88,8 @@ const extensionDestinations: Array<{ eyebrow: string; title: string; intro: stri
     title: "비치",
     intro: "맑고 푸른 바다에서 해양 체험과 섬 여행의 여유를 함께 누리는 연계 휴양지입니다.",
     destinations: [
-      { title: "Duka Bay", image: "/extension-duka-bay.jpg", alt: "맑고 잔잔한 바다와 나무 그늘이 펼쳐진 Duka Bay", copy: "미사미스 오리엔탈 메디나에 자리한 한적한 해변 휴양지. 맑은 바다에서 스노클링과 다이빙을 즐기며 여유로운 하루를 보낼 수 있습니다.", tags: ["추천 연계 코스", "비치", "스노클링"], credit: "PHOTO · DUKA BAY, MEDINA" },
-      { title: "Camiguin Island", image: "/extension-camiguin.png", alt: "푸른 바다와 화산 지형이 어우러진 Camiguin Island", copy: "화산과 온천, 폭포와 하얀 모래섬을 한 번에 만나는 ‘불의 섬’. 화이트 아일랜드와 해양 체험을 중심으로 1~2박 연계 일정에 적합합니다.", tags: ["추천 연계 코스", "섬 여행", "화이트 아일랜드"], credit: "PHOTO · PHILIPPINES.TRAVEL" },
+      { title: "Duka Bay", image: "/extension-duka-bay.jpg", alt: "맑고 잔잔한 바다와 나무 그늘이 펼쳐진 Duka Bay", copy: "미사미스 오리엔탈 메디나에 자리한 한적한 해변 휴양지. 맑은 바다에서 스노클링과 다이빙을 즐기며 여유로운 하루를 보낼 수 있습니다. 카가얀 데오르에서 차로 2시간 30분 소요됩니다.", tags: ["추천 연계 코스", "비치", "스노클링"], credit: "PHOTO · DUKA BAY, MEDINA" },
+      { title: "Camiguin Island", image: "/extension-camiguin.png", alt: "푸른 바다와 화산 지형이 어우러진 Camiguin Island", copy: "화산과 온천, 폭포와 하얀 모래섬을 한 번에 만나는 ‘불의 섬’. 화이트 아일랜드와 해양 체험을 중심으로 1~2박 연계 일정에 적합합니다. 카가얀 데오르에서 차로 2시간 항구 이동 후, 배로 2시간 가는 거리이며 1박 또는 2박을 추천합니다.", tags: ["추천 연계 코스", "섬 여행", "화이트 아일랜드"], credit: "PHOTO · PHILIPPINES.TRAVEL" },
     ] satisfies Destination[],
   },
 ];
