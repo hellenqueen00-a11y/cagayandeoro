@@ -13,6 +13,8 @@ type Destination = {
   copy: string;
   tags: string[];
   credit?: string;
+  href?: string;
+  imageFit?: "cover" | "contain";
   gallery?: Array<{ src: string; alt: string }>;
 };
 
@@ -71,7 +73,7 @@ const destinationGroups: Array<{
   },
 ];
 
-const extensionDestinations = [
+const extensionDestinations: Array<{ eyebrow: string; title: string; intro: string; destinations: Destination[] }> = [
   {
     eyebrow: "WATERFALL",
     title: "폭포",
@@ -91,6 +93,16 @@ const extensionDestinations = [
     ] satisfies Destination[],
   },
 ];
+
+extensionDestinations.push({
+  eyebrow: "ADVENTURE & EXPERIENCE",
+  title: "액티비티",
+  intro: "부키드논의 하늘과 카가얀데오로의 사격장에서 만나는 색다른 체험입니다.",
+  destinations: [
+    { title: "부키드논 패러글라이딩", image: "/extension-paragliding.png", imageFit: "contain", alt: "부키드논 패러글라이딩 익스피리언스의 숲 위 비행 모습", copy: "부키드논 발렌시아의 아나하원산에서 즐기는 탠덤 패러글라이딩. 파일럿과 함께 하늘을 날며 고원의 탁 트인 풍경을 감상하는 체험입니다.", tags: ["부키드논", "탠덤 비행", "고원 전망"], credit: "PHOTO · BUKIDNON PARAGLIDING EXPERIENCE", href: "https://www.facebook.com/paraglidingbukidnon/" },
+    { title: "슈팅 건 체험 · NMPSA", image: "/extension-nmpsa.png", alt: "카가얀데오로 NMPSA 사격장의 현장 안내 모습", copy: "카가얀데오로 불루아에 위치한 NMPSA Firing Range. 현장 안전 안내에 따라 표적 사격을 경험할 수 있는 이색 액티비티입니다.", tags: ["카가얀데오로", "불루아", "사격 체험"], credit: "PHOTO · DOT-10 / NMPSA · VIA METROCDODEV", href: "https://www.facebook.com/pages/NMPSA%20Firing%20Range,%20Bulua%20Cagayan%20De%20Oro/599784120079148/" },
+  ],
+});
 
 const itinerary = [
   { day: "DAY 1", date: "9.30 (수)", title: "카가얀데오로 도착", theme: "ARRIVAL", items: ["인천 공항 → 라긴딩안 공항", "룩스 호텔"] },
@@ -272,11 +284,11 @@ export default function Home() {
           </section>
         ))}
 
-        <section className="destination-group extension-group">
+        <section className="destination-group extension-group" id="extensions">
           <div className="category-heading extension-heading">
             <span>06</span>
             <div><p>BEYOND THE FAM TOUR</p><h3>Extension Destinations</h3></div>
-            <p>이번 팸투어의 실제 방문 일정에는 포함되지 않지만, 카가얀데오로를 거점으로 여행상품을 확장할 때 함께 제안할 수 있는 북부 민다나오의 연계 목적지입니다.</p>
+            <p>카가얀데오로를 거점으로 여행상품을 확장할 때 함께 제안할 수 있는 북부 민다나오의 연계 목적지와 체험입니다.</p>
           </div>
           {extensionDestinations.map((category) => (
             <div className="extension-category" key={category.title}>
@@ -289,13 +301,14 @@ export default function Home() {
                 {category.destinations.map((destination) => (
                   <article className="destination-card" key={destination.title}>
                     <div className="destination-card-image">
-                      <Image src={destination.image} alt={destination.alt} fill sizes="(max-width: 800px) 100vw, 40vw" />
+                      <Image src={destination.image} alt={destination.alt} fill sizes="(max-width: 800px) 100vw, 40vw" style={{ objectFit: destination.imageFit ?? "cover" }} />
                       <small className="photo-credit">{destination.credit}</small>
                     </div>
                     <div className="destination-card-copy">
                       <h3>{destination.title}</h3>
                       <p>{destination.copy}</p>
                       <div className="product-tags">{destination.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+                      {destination.href && <a className="extension-link" href={destination.href} target="_blank" rel="noopener noreferrer">페이스북에서 자세히 보기 ↗</a>}
                     </div>
                   </article>
                 ))}
