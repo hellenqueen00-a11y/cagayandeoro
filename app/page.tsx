@@ -93,10 +93,10 @@ const extensionDestinations = [
 ];
 
 const itinerary = [
-  { day: "DAY 1", title: "도착과 환영", theme: "ARRIVAL & WELCOME", items: ["16:45 라긴딩안 공항 도착", "17:00–18:00 공항 환영 및 세다 호텔 이동", "18:00–19:00 체크인 및 휴식", "19:00 환영 만찬 · 카가얀데오로 시장 주최", "만찬 후 세다 호텔 귀환 및 휴식"] },
-  { day: "DAY 2", title: "해양 관광과 명소", theme: "MARINE TOURISM & ATTRACTIONS", items: ["08:30 세다 호텔 출발", "09:05 로하스 에어포트 호텔 도착", "09:05–09:45 코코넛 환영 및 시설 안내", "09:45 로하스 아쿠아 리조트 이동", "오전–12:30 해양스포츠 · 헬멧다이빙 등", "12:30–13:30 점심", "14:00–15:00 디바인 메르시 성지 방문", "15:30–17:00 사격 체험", "17:50 하이릿지 디너 · 필리핀 관광부 지역 10 디렉터 주최", "저녁 후 세다 호텔 귀환"] },
-  { day: "DAY 3", title: "골프·클라베리아·래프팅", theme: "GOLF · CLAVERIA · RAFTING", items: ["오전 골프팀 · 푸에블로 골프 코스", "오전 관광팀 · 클라베리아 투어", "점심 골프팀 · 푸에블로 클럽하우스", "점심 관광팀 · 훌리오 레스토랑", "12:30 전원 합류", "13:00 화이트 워터 래프팅", "16:30–17:00 래프팅 종료 및 푸에블로 클럽하우스 이동", "샤워 및 환복", "18:30 Governor’s Night · 주정부 주최", "21:00 드림 골프텔 체크인"] },
-  { day: "DAY 4", title: "골프·관광·공항 컨퍼런스", theme: "GOLF · TOURISM · AIRPORT CONFERENCE", items: ["오전 골프팀 · 델몬테 골프 코스", "오전 관광팀 · 임파수공 및 파인애플 농장", "12:00 리카도스 레스토랑 합류", "12:00–13:00 점심", "13:00 다힐라얀 이동", "13:20–14:00 다힐라얀 가이드 투어", "14:00 라긴딩안 공항 이동", "15:40 공항 도착", "15:45–17:15 VIP룸 컨퍼런스 · Aboitiz 주최", "체크인 및 출국 준비", "19:05 라긴딩안 공항 출발"] },
+  { day: "DAY 1", date: "9.30 (수)", title: "카가얀데오로 도착", theme: "ARRIVAL", items: ["인천 공항 → 라긴딩안 공항", "룩스 호텔"] },
+  { day: "DAY 2", date: "10.1 (목)", title: "명소와 바다", theme: "CITY & SEA", items: ["사격장", "디바인 메르시 성지", "로하스 에어포트 호텔", "로하스 아쿠아 리조트", "룩스 호텔", "하이릿지", "야시장 (선택)"] },
+  { day: "DAY 3", date: "10.2 (금)", title: "골프·클라베리아·래프팅", theme: "GOLF · CLAVERIA · RAFTING", items: ["골프팀 · 푸에블로 골프 코스·클럽하우스", "관광팀 · 클라베리아", "화이트 워터 래프팅", "드림 골프텔"] },
+  { day: "DAY 4", date: "10.3 (토)", title: "고원 여행과 귀국", theme: "HIGHLANDS & DEPARTURE", items: ["골프팀 · 델몬테 골프 코스", "관광팀 · 커뮤니얼 랜치", "리카도스 레스토랑", "다힐라얀 어드벤처 파크", "라긴딩안 공항 → 한국"] },
 ];
 
 const restaurants = [
@@ -375,7 +375,7 @@ export default function Home() {
         <header className="itinerary-header">
           <p className="section-kicker">05 / ITINERARY</p>
           <h2>3박 4일,<br /><em>낯선 도시를 탐구하는 여정</em></h2>
-          <p>바다와 강의 모험부터 산과 자연, 프리미엄 골프까지 밀도 있게 연결한 카가얀데오로 팸투어 일정입니다.</p>
+          <p>9월 30일부터 10월 3일까지, 날짜별 주요 행선지를 한눈에 살펴보세요.</p>
         </header>
         <div className="itinerary-summary" aria-label="여행 일정 요약">
           <div><strong>3</strong><span>NIGHTS</span></div>
@@ -391,7 +391,7 @@ export default function Home() {
                 <div><small>{item.theme}</small><h3>{item.title}</h3></div>
               </div>
               <ul>{item.items.map((detail) => <li key={detail}>{detail}</li>)}</ul>
-              <div className="itinerary-day">{item.day}</div>
+              <div className="itinerary-day">{item.day}<br />{item.date}</div>
             </article>
           ))}
         </div>
