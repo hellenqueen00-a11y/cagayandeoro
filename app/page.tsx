@@ -108,7 +108,7 @@ const itinerary = [
   { day: "DAY 1", date: "9.30 (수)", title: "카가얀데오로 도착", theme: "ARRIVAL", items: ["인천 공항 → 라긴딩안 공항", "룩스 호텔"] },
   { day: "DAY 2", date: "10.1 (목)", title: "명소와 바다", theme: "CITY & SEA", items: ["사격장", "디바인 메르시 성지", "로하스 에어포트 호텔", "로하스 아쿠아 리조트", "룩스 호텔", "하이릿지", "야시장 (선택)"] },
   { day: "DAY 3", date: "10.2 (금)", title: "골프·클라베리아·래프팅", theme: "GOLF · CLAVERIA · RAFTING", items: ["골프팀 · 푸에블로 골프 코스·클럽하우스", "관광팀 · 클라베리아", "화이트 워터 래프팅", "드림 골프텔"] },
-  { day: "DAY 4", date: "10.3 (토)", title: "고원 여행과 귀국", theme: "HIGHLANDS & DEPARTURE", items: ["골프팀 · 델몬테 골프 코스", "관광팀 · 커뮤니얼 랜치", "리카도스 레스토랑", "다힐라얀 어드벤처 파크", "라긴딩안 공항 → 한국"] },
+  { day: "DAY 4", date: "10.3 (토)", title: "골프, 어드벤처와 마운틴 힐링", theme: "GOLF · ADVENTURE · MOUNTAIN", items: ["골프팀 · 델몬테 골프 코스", "관광팀 · 커뮤니얼 랜치", "리카도스 레스토랑", "다힐라얀 어드벤처 파크", "라긴딩안 공항 → 한국"] },
 ];
 
 const restaurants = [
@@ -397,14 +397,14 @@ export default function Home() {
           <div><strong>1</strong><span>NEW DESTINATION</span></div>
         </div>
         <div className="itinerary-grid">
-          {itinerary.map((item, index) => (
+          {itinerary.map((item) => (
             <article className="itinerary-card" key={item.day}>
               <div className="itinerary-card-top">
-                <span>0{index + 1}</span>
+                <span>{item.date}</span>
                 <div><small>{item.theme}</small><h3>{item.title}</h3></div>
               </div>
               <ul>{item.items.map((detail) => <li key={detail}>{detail}</li>)}</ul>
-              <div className="itinerary-day">{item.day}<br />{item.date}</div>
+              <div className="itinerary-day">{item.day}</div>
             </article>
           ))}
         </div>
