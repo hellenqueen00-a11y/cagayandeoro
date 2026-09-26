@@ -152,12 +152,20 @@ export default function Home() {
         <div className="sun" aria-hidden="true" />
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
-          <p className="eyebrow"><span /> CAGAYAN DE ORO · PHILIPPINES</p>
-          <h1>낯선 도시의<br />가장 <em>빛나는</em> 순간.</h1>
-          <p className="hero-description">산, 강, 바다 모든 곳이 어우러진<br />힐링과 모험의 숨은 여행지</p>
+          <p className="eyebrow"><span /> DISCOVER THE PHILIPPINES · CDO FAM TOUR</p>
+          <h1 className="welcome-title" aria-label="Welcome to Cagayan de Oro">
+            <span className="welcome-label">WELCOME TO</span>
+            <span className="welcome-wordmark" aria-hidden="true">
+              {["CAGAYAN", "DE ORO"].map((word) => (
+                <span className="welcome-line" key={word}>{Array.from(word).map((letter, index) => <span className={letter === " " ? "welcome-space" : "welcome-letter"} key={index}>{letter}</span>)}</span>
+              ))}
+            </span>
+          </h1>
+          <p className="hero-description">필리핀의 새로운 여행지,<br />카가얀데오로에 오신 것을 환영합니다.</p>
+          <p className="hero-subtitle">바다와 강의 모험, 고원의 자연과 골프를 한곳에서 만나보세요.</p>
           <div className="hero-actions">
-            <a className="button primary" href="#schedule">여정 살펴보기 <span>→</span></a>
-            <a className="text-link" href="#experience">WHY CDO? <span>↓</span></a>
+            <a className="button primary" href="#schedule">카가얀데오로 둘러보기 <span>→</span></a>
+            <a className="text-link" href="#itinerary">팸투어 일정 보기 <span>↓</span></a>
           </div>
         </div>
         <div className="route-card">
