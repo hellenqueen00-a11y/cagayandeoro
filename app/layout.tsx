@@ -6,25 +6,25 @@ export const metadata: Metadata = {
   title: "Cagayan De Oro Fam Tour 2026",
   description: "산과 강, 바다 모든 곳이 어우러진 힐링과 모험의 숨은 여행지, 카가얀데오로.",
   openGraph: {
-    title: "낯선 도시의 가장 빛나는 순간",
+    title: "Welcome to Cagayan De Oro",
     description: "산과 강, 바다 모든 곳이 어우러진 힐링과 모험의 숨은 여행지",
     url: "https://cagayandeoro.vercel.app/",
     siteName: "Cagayan De Oro Fam Tour 2026",
     locale: "ko_KR",
     type: "website",
     images: [{
-      url: "/hero-share-2400.png",
-      width: 2400,
-      height: 1260,
-      alt: "낯선 도시의 가장 빛나는 순간, Cagayan De Oro",
-      type: "image/png",
+      url: "/share-ocean-welcome-v1.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Welcome to Cagayan De Oro — 바다와 모험의 여행지",
+      type: "image/jpeg",
     }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "낯선 도시의 가장 빛나는 순간",
+    title: "Welcome to Cagayan De Oro",
     description: "힐링과 모험의 숨은 여행지, 카가얀데오로",
-    images: ["/hero-share-2400.png"],
+    images: ["/share-ocean-welcome-v1.jpg"],
   },
 };
 
@@ -32,7 +32,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ko">
       <head>
-        <link rel="image_src" href="https://cagayandeoro.vercel.app/hero-share-2400.png" />
+        <link rel="image_src" href="https://cagayandeoro.vercel.app/share-ocean-welcome-v1.jpg" />
       </head>
       <body>{children}</body>
     </html>
