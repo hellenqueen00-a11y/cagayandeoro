@@ -97,8 +97,9 @@ const extensionDestinations: Array<{ eyebrow: string; title: string; intro: stri
 extensionDestinations.push({
   eyebrow: "ADVENTURE & EXPERIENCE",
   title: "액티비티",
-  intro: "부키드논의 하늘과 카가얀데오로의 사격장에서 만나는 색다른 체험입니다.",
+  intro: "하늘에서의 모험부터 사격장 체험과 워터파크까지, 여행에 즐거움을 더하는 액티비티입니다.",
   destinations: [
+    { title: "세븐시즈 워터파크", image: "/extension-seven-seas.jpg", alt: "세븐시즈 워터파크의 워터슬라이드와 수영장 전경", copy: "해적 테마로 꾸며진 세븐시즈 워터파크. 짜릿한 워터슬라이드와 파도풀, 유수풀 등 다양한 물놀이 시설에서 가족과 함께 시원한 하루를 즐길 수 있습니다.", tags: ["워터파크", "워터슬라이드", "가족 여행"], credit: "PHOTO · SEVEN SEAS WATERPARK & RESORT", href: "https://www.facebook.com/sevenseaswaterpark" },
     { title: "부키드논 패러글라이딩", image: "/extension-paragliding-landscape.png", imageFit: "cover", alt: "부키드논 산악 풍경 위에서 즐기는 탠덤 패러글라이딩", copy: "부키드논 발렌시아의 아나하원산에서 즐기는 탠덤 패러글라이딩. 파일럿과 함께 하늘을 날며 고원의 탁 트인 풍경을 감상하는 체험입니다.", tags: ["부키드논", "탠덤 비행", "고원 전망"], credit: "PHOTO · BUKIDNON PARAGLIDING EXPERIENCE", href: "https://www.facebook.com/paraglidingbukidnon/" },
     { title: "사격장 체험", image: "/extension-nmpsa.png", alt: "카가얀데오로 NMPSA 사격장의 현장 안내 모습", copy: "카가얀데오로 불루아에 위치한 NMPSA Firing Range. 현장 안전 안내에 따라 표적 사격을 경험할 수 있는 이색 액티비티입니다.", tags: ["카가얀데오로", "불루아", "사격 체험"], credit: "PHOTO · DOT-10 / NMPSA · VIA METROCDODEV", href: "https://www.facebook.com/pages/NMPSA%20Firing%20Range,%20Bulua%20Cagayan%20De%20Oro/599784120079148/" },
   ],
