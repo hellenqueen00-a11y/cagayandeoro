@@ -253,3 +253,16 @@ footer h2 { font-size: clamp(46px, 5.5vw, 78px); margin-top: 25px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 @media (max-width: 800px) { .hero { height: auto; min-height: 100svh; padding-bottom: 240px; } .hero-copy { width: 100%; } .hero .eyebrow { font-size: 9px; letter-spacing: .1em; } .welcome-line { font-size: clamp(36px, 10.6vw, 80px); } .welcome-label { font-size: clamp(30px, 8vw, 58px); } .hero-actions { flex-wrap: wrap; gap: 18px; } .hero .button { gap: 20px; } }
+
+.hero.hero-ocean { min-height: 720px; min-height: 100svh; height: auto; padding: 160px 5vw 100px; justify-content: center; align-items: center; text-align: center; background: #123b4c; }
+.hero-ocean-image { object-fit: cover; object-position: center 60%; }
+.hero-ocean-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(3,24,38,.48), rgba(3,30,43,.36) 45%, rgba(3,24,38,.60)); }
+.hero-ocean .hero-copy { width: 100%; max-width: 1400px; }
+.hero-ocean .eyebrow { justify-content: center; font-size: 11px; letter-spacing: .23em; }
+.hero-ocean .welcome-title { margin: 32px 0; color: white; text-shadow: 0 3px 24px rgba(0,0,0,.25); }
+.hero-ocean .welcome-label { font-size: clamp(28px, 4vw, 62px); letter-spacing: .16em; margin-bottom: 18px; }
+.ocean-city-name { display: block; font: 700 clamp(48px, 7.6vw, 116px)/1.06 Georgia, 'Times New Roman', serif; letter-spacing: -.045em; text-wrap: balance; }
+.hero-ocean .hero-description { font-size: clamp(16px, 1.6vw, 21px); line-height: 1.8; text-shadow: 0 2px 10px rgba(0,0,0,.4); }
+.hero-ocean .hero-actions { justify-content: center; margin-top: 32px; }
+.hero-ocean .button.primary { background: rgba(255,255,255,.94); color: #12372a; }
+@media (max-width: 800px) { .hero.hero-ocean { padding: 145px 24px 85px; } .hero-ocean .hero-actions { align-items: center; } .hero-ocean .eyebrow { font-size: 9px; letter-spacing: .12em; } .ocean-city-name { font-size: clamp(42px, 11vw, 78px); } }

@@ -148,34 +148,21 @@ export default function Home() {
         <a className="nav-cta" href="#contact">초청 문의 <span>↗</span></a>
       </nav>
 
-      <section className="hero" id="top">
-        <Image className="hero-social-cover" src="/hero-share-2400.png" alt="" width={2400} height={1260} priority unoptimized aria-hidden="true" />
-        <div className="hero-grid" aria-hidden="true" />
+      <section className="hero hero-ocean" id="top">
+        <Image className="hero-ocean-image" src="/rohas-sea.jpeg" alt="푸른 바다와 해변으로 이어지는 로하스의 나무 부두" fill sizes="100vw" priority />
+        <div className="hero-ocean-shade" aria-hidden="true" />
         <div className="hero-copy">
-          <p className="eyebrow"><span /> DISCOVER THE PHILIPPINES · CDO FAM TOUR</p>
+          <p className="eyebrow">PHILIPPINES · CITY OF GOLDEN FRIENDSHIP</p>
           <h1 className="welcome-title" aria-label="Welcome to Cagayan de Oro">
             <span className="welcome-label">WELCOME TO</span>
-            <span className="welcome-wordmark" aria-hidden="true">
-              {["CAGAYAN", "DE ORO"].map((word) => (
-                <span className="welcome-line" key={word}>{Array.from(word).map((letter, index) => <span className={letter === " " ? "welcome-space" : "welcome-letter"} key={index}>{letter}</span>)}</span>
-              ))}
-            </span>
+            <span className="ocean-city-name">CAGAYAN DE ORO</span>
           </h1>
           <p className="hero-description">필리핀의 새로운 여행지,<br />카가얀데오로에 오신 것을 환영합니다.</p>
-          <p className="hero-subtitle">바다와 강의 모험, 고원의 자연과 골프를 한곳에서 만나보세요.</p>
           <div className="hero-actions">
             <a className="button primary" href="#schedule">카가얀데오로 둘러보기 <span>→</span></a>
             <a className="text-link" href="#itinerary">팸투어 일정 보기 <span>↓</span></a>
           </div>
         </div>
-        <div className="route-card">
-          <span className="route-label">THE ROUTE</span>
-          <strong>SEOUL</strong>
-          <span className="route-line"><i /><i /><i /></span>
-          <strong>CAGAYAN<br />DE ORO</strong>
-          <small>8°29′N 124°39′E</small>
-        </div>
-        <p className="vertical-note">CREATE STORIES · MEET THE REAL MINDANAO</p>
       </section>
 
       <section className="manifesto" id="experience">
