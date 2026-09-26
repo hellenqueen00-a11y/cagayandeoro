@@ -149,7 +149,6 @@ export default function Home() {
 
       <section className="hero" id="top">
         <Image className="hero-social-cover" src="/hero-share-2400.png" alt="" width={2400} height={1260} priority unoptimized aria-hidden="true" />
-        <div className="sun" aria-hidden="true" />
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
           <p className="eyebrow"><span /> DISCOVER THE PHILIPPINES · CDO FAM TOUR</p>
