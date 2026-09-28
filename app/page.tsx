@@ -123,7 +123,7 @@ const restaurants = [
 ];
 
 const hotels = [
-  { name: "Limketkai Luxe Hotel", grade: "4성급", rooms: "218실", detail: "도심의 스카이라인을 완성하는 골드빛 랜드마크 호텔", image: "/hotel-limketkai.jpg", url: "https://limketkailuxe.com/" },
+  { name: "Limketkai Luxe Hotel", grade: "4성급", rooms: "218실", detail: "도심의 스카이라인을 완성하는 골드빛 랜드마크 호텔", image: "/hotel-limketkai.jpg", secondaryImage: "/hotel-luxe-room.png", url: "https://limketkailuxe.com/" },
   { name: "Seda Centrio Hotel", grade: "4성급", rooms: "147실", detail: "센트리오 몰과 연결된 편리한 도심형 호텔", image: "/hotel-seda-centrio.jpg", secondaryImage: "/hotel-seda-room.png", url: "https://www.facebook.com/sedacentriohotel/" },
   { name: "Dream Golftel", grade: "3성급", rooms: "42실", detail: "델몬테 골프장에서 약 5분 거리의 골프 특화 숙소", image: "/hotel-dream-golftel-new.png", url: "https://dreamgolftel.com/" },
   { name: "Lohas Airport Hotel", grade: "3성급", rooms: "16실", detail: "라긴딩안 공항에서 약 5분 거리의 편리한 공항 호텔", image: "/hotel-lohas-pool.jpg", secondaryImage: "/hotel-lohas-airport-new.png", url: "https://www.facebook.com/LohasHotel/" },
@@ -354,7 +354,7 @@ export default function Home() {
               <div className="hotel-image">
                 {hotel.secondaryImage ? (
                   <div className={`hotel-image-pair${hotel.thirdImage ? " hotel-image-trio" : ""}`}>
-                    <div><Image src={hotel.image} alt={`${hotel.name} ${hotel.name === "Seda Centrio Hotel" ? "외관" : hotel.thirdImage ? "해변 다이닝 전경" : "수영장"}`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>
+                    <div><Image src={hotel.image} alt={`${hotel.name} ${(hotel.name === "Seda Centrio Hotel" || hotel.name === "Limketkai Luxe Hotel") ? "외관" : hotel.thirdImage ? "해변 다이닝 전경" : "수영장"}`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>
                     <div><Image src={hotel.secondaryImage} alt={`${hotel.name} 객실`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>
                     {hotel.thirdImage && <div><Image src={hotel.thirdImage} alt={`${hotel.name} 수영장`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>}
                   </div>
